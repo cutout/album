@@ -111,21 +111,20 @@
     float:right;
     text-align: right;
     height: auto;
-
     ul {
-        opacity:0;
-        @include animation(('fade-in linear 1.5s 1.5s forwards','slide-from-right linear 1.2s 1.2s forwards'));
+        @include animation(('fade-in 1.5s','slide-from-right 1.2s'));
         @include screen-sm {
             display:none;
             padding:20px 0;
             float:none;
             position: absolute;
             width: 100%;
-            background-color: #5E616D;
+            background-color: #41434b;
             left: 0;
             top: 0;
             text-align: center;
             height: 100vh;
+            padding-top: 20%;
             z-index: 2;
             @include animation(('fade-in 0','slide-from-right 0'));
         }
@@ -140,7 +139,7 @@
             text-decoration: none;
             color:inherit;
             @include fat-border;
-            &:hover, &:active {
+            &:hover {
               @include fat-border-hover
             }
             @include screen-sm {
@@ -152,7 +151,7 @@
         }
         @include screen-sm {
             width:100%;
-            display: block;
+            display: inline-block;
             padding:0;
             margin:0;
         }
@@ -162,11 +161,20 @@
         position:absolute;
         top: 94px;
         z-index: 3;
-        right: $screen-padding;
+        right: $screen-padding-large;
+        @include screen-med {
+          top:92px;
+        }
         @include screen-sm {
             display:block;
+            right:$screen-padding-sm;
+            top:44px;
         }
-    }
+        @include screen-xs {
+            top:22px;
+            right:30px;
+        }
+      }
 }
 
 

@@ -5,6 +5,9 @@
   width: 100%;
   z-index: 999;
   padding: 10px;
+  @include screen-sm {
+    display: none;
+  }
 }
 
 .top-border {
@@ -29,7 +32,23 @@
 }
 
 .container {
-  padding: $screen-padding;
+  padding: $screen-padding-large;
+  @include screen-sm {
+    padding: $screen-padding-sm;
+  }
+  @include screen-xs {
+    padding:$screen-padding-xs
+  }
+}
+.container,.row {
+  @include screen-med {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include screen-xs {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .mast {
   .col {
@@ -58,9 +77,17 @@
     opacity: 0;
     @include animation('fade-in linear .8s .8s forwards');
     width:75%;
-    @include screen-sm {
+    @include screen-med {
       font-size:4rem;
       width:auto;
+    }
+    @include screen-sm {
+      font-size: 3.2rem;
+      margin:17% 0 24%;
+    }
+    @include screen-xs {
+      font-size: 2.2rem;
+      margin:23% 0 21%;
     }
   }
 }

@@ -105,12 +105,11 @@
   text-align: right;
   height: auto; }
   .menu.col ul {
-    opacity: 0;
-    -webkit-animation: fade-in linear 1.5s 1.5s forwards, slide-from-right linear 1.2s 1.2s forwards;
-    -moz-animation: fade-in linear 1.5s 1.5s forwards, slide-from-right linear 1.2s 1.2s forwards;
-    -ms-animation: fade-in linear 1.5s 1.5s forwards, slide-from-right linear 1.2s 1.2s forwards;
-    -o-animation: fade-in linear 1.5s 1.5s forwards, slide-from-right linear 1.2s 1.2s forwards;
-    animation: fade-in linear 1.5s 1.5s forwards, slide-from-right linear 1.2s 1.2s forwards; }
+    -webkit-animation: fade-in 1.5s, slide-from-right 1.2s;
+    -moz-animation: fade-in 1.5s, slide-from-right 1.2s;
+    -ms-animation: fade-in 1.5s, slide-from-right 1.2s;
+    -o-animation: fade-in 1.5s, slide-from-right 1.2s;
+    animation: fade-in 1.5s, slide-from-right 1.2s; }
     @media only screen and (max-width: 768px) {
       .menu.col ul {
         display: none;
@@ -118,11 +117,12 @@
         float: none;
         position: absolute;
         width: 100%;
-        background-color: #5E616D;
+        background-color: #41434b;
         left: 0;
         top: 0;
         text-align: center;
         height: 100vh;
+        padding-top: 20%;
         z-index: 2;
         -webkit-animation: fade-in 0, slide-from-right 0;
         -moz-animation: fade-in 0, slide-from-right 0;
@@ -139,7 +139,7 @@
       color: inherit;
       border-bottom: 3px solid transparent;
       box-shadow: none; }
-      .menu.col li a:hover, .menu.col li a:active, .menu.col li a:visited:hover, .menu.col li a:visited:active {
+      .menu.col li a:hover, .menu.col li a:visited:hover {
         border-bottom: 3px solid #00CDED;
         box-shadow: inset 0 -5px 0 #00CDED; }
       @media only screen and (max-width: 768px) {
@@ -151,7 +151,7 @@
     @media only screen and (max-width: 768px) {
       .menu.col li {
         width: 100%;
-        display: block;
+        display: inline-block;
         padding: 0;
         margin: 0; } }
   .menu.col .tcon {
@@ -160,9 +160,18 @@
     top: 94px;
     z-index: 3;
     right: 100px; }
+    @media only screen and (max-width: 960px) {
+      .menu.col .tcon {
+        top: 92px; } }
     @media only screen and (max-width: 768px) {
       .menu.col .tcon {
-        display: block; } }
+        display: block;
+        right: 50px;
+        top: 44px; } }
+    @media only screen and (max-width: 500px) {
+      .menu.col .tcon {
+        top: 22px;
+        right: 30px; } }
 
 .filtering hr {
   margin-bottom: 20px; }
@@ -462,6 +471,10 @@ textarea {
   width: 100%;
   z-index: 999;
   padding: 10px; }
+  @media only screen and (max-width: 768px) {
+    .top-border, .bottom-border,
+    .left-border, .right-border {
+      display: none; } }
 
 .top-border {
   top: 0;
@@ -485,6 +498,21 @@ textarea {
 
 .container {
   padding: 100px; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      padding: 50px; } }
+  @media only screen and (max-width: 500px) {
+    .container {
+      padding: 30px; } }
+
+@media only screen and (max-width: 960px) {
+  .container, .row {
+    padding-left: 50px;
+    padding-right: 50px; } }
+@media only screen and (max-width: 500px) {
+  .container, .row {
+    padding-left: 30px;
+    padding-right: 30px; } }
 
 .mast .col {
   margin: 0; }
@@ -514,10 +542,18 @@ textarea {
   -o-animation: fade-in linear .8s .8s forwards;
   animation: fade-in linear .8s .8s forwards;
   width: 75%; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 960px) {
     .intro h3 {
       font-size: 4rem;
       width: auto; } }
+  @media only screen and (max-width: 768px) {
+    .intro h3 {
+      font-size: 3.2rem;
+      margin: 17% 0 24%; } }
+  @media only screen and (max-width: 500px) {
+    .intro h3 {
+      font-size: 2.2rem;
+      margin: 23% 0 21%; } }
 
 .filtering {
   float: left;
