@@ -1,0 +1,200 @@
+// Transformicons
+.tcon {
+    @include appearance(none);
+    border: none;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 40px;
+    @include transition(0.3s);
+    @include user-select(none);
+    background: transparent;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    padding:0;
+    > * {
+        display:block;
+    }
+    &:hover,&:focus {
+        outline: none;
+    }
+    &::-moz-focus-inner {
+        border:0;
+    }
+}
+
+.tcon,.tcon-menu__lines,.tcon-menu__lines::before,.tcon-menu__lines::after {
+    width:40px;
+}
+
+.tcon-menu__lines,.tcon-menu__lines::before,.tcon-menu__lines::after {
+    display: inline-block;
+    height: 3px;
+    @include transition(0.3s);
+    background: #6c6f7d;
+    position: relative;
+}
+
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    -webkit-transform-origin: 2.85714px center;
+    transform-origin: 2.85714px center;
+    width: 100%;
+}
+
+.tcon-menu__lines::before {
+    top: 10px;
+}
+
+.tcon-menu__lines::after {
+    top: -10px;
+}
+
+.tcon-transform .tcon-menu__lines {
+    transform: scale3d(0.8, 0.8, 0.8);
+}
+
+.tcon-menu--xcross {
+    width: auto;
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines {
+    background: transparent;
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before,
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+    transform-origin: 50% 50%;
+    top: 0;
+    width: 40px;
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.tcon-visuallyhidden {
+    border: 0;
+    @include visuallyhidden;
+    &:active,&:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+
+
+//Primary Nav Menu
+
+.bar {
+    @extend .clearfix;
+}
+
+.menu.col {
+    float:right;
+    text-align: right;
+    height: auto;
+
+    ul {
+        opacity:0;
+        @include animation(('fade-in linear 1.5s 1.5s forwards','slide-from-right linear 1.2s 1.2s forwards'));
+        @include screen-sm {
+            display:none;
+            padding:20px 0;
+            float:none;
+            position: absolute;
+            width: 100%;
+            background-color: #5E616D;
+            left: 0;
+            top: 0;
+            text-align: center;
+            height: 100vh;
+            z-index: 2;
+            @include animation(('fade-in 0','slide-from-right 0'));
+        }
+    }
+    li {
+        display: inline-block;
+        margin:0 20px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a,a:visited {
+            text-decoration: none;
+            color:inherit;
+            @include fat-border;
+            &:hover, &:active {
+              @include fat-border-hover
+            }
+            @include screen-sm {
+                color:#fff;
+                display: inline-block;
+                font-size:2.5rem;
+                padding:10px 15px;
+            }
+        }
+        @include screen-sm {
+            width:100%;
+            display: block;
+            padding:0;
+            margin:0;
+        }
+    }
+    .tcon {
+        display:none;
+        position:absolute;
+        top: 94px;
+        z-index: 3;
+        right: $screen-padding;
+        @include screen-sm {
+            display:block;
+        }
+    }
+}
+
+
+//Sidebar Menu
+
+.filtering {
+  hr {
+    margin-bottom: 20px;
+  }
+  ul {
+    margin-bottom: 40px;
+  }
+  li {
+    list-style: none;
+    margin:15px 0;
+    .is-checked {
+      &:before {
+        content: "\2713";
+      }
+    }
+  }
+  a,a:visited {
+    color:$text-color-lt;
+    margin-left: 12px;
+    display: inline-block;
+    @include fat-border;
+    &:hover,&:active {
+      @include fat-border-hover;
+    }
+  }
+}
