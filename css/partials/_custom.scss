@@ -93,8 +93,6 @@
 }
 
 .filtering {
-  float:left;
-  width:16%;
   h4 {
     margin-bottom: 30px;
   }
@@ -123,11 +121,36 @@
   }
 }
 
-.samples {
-  float:right;
-  width:80%
+.widget {
+  margin-bottom:30px;
+  h4 {
+    margin-bottom: 20px;
+  }
+  ul {
+    li {
+      list-style: none;
+      line-height: 1.35;
+      margin-bottom: 15px;
+      a {
+        color:inherit;
+      }
+      .date {
+        color: $text-color-lt;
+        display: inline;
+      }
+    }
+  }
 }
 
 .widgets-footer {
   margin-top: 10%;
+  hr {
+    margin:5% 0;
+  }
+  .widget {
+    @include screen-sm {
+      float:none;
+      display: block;
+    }
+  }
 }

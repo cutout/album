@@ -49,8 +49,9 @@ body, input, textarea, select, button {
 a, a:visited {
     color: $link-color;
     text-decoration: none;
+    border-bottom: 1px solid $border-dark;
     &:hover, &:active {
-        color:darken($link-color,10%);
+        color:$link-color
     }
 }
 
@@ -87,6 +88,10 @@ figure {
 img {
     height: auto;
     max-width:100%
+}
+
+.small,small {
+  font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -146,7 +151,7 @@ code {
   }
   .col {
       float: left;
-      margin:25px 1.6% 25px 0;
+      margin:25px 2.5% 25px 0;
       display: block;
       &:last-child,&.twelvecol {
           margin-right:0;
@@ -200,6 +205,53 @@ code {
       width:auto;
   }
 
+
+  .onecol {
+  	width:  6.041%;
+  }
+
+  .twocol {
+    	width: 14.58%;
+  }
+  .threecol {
+    	width: 23.12%;
+  }
+
+  .fourcol {
+    	width: 31.66%;
+  }
+
+  .fivecol {
+    	width: 40.20%;
+  }
+
+  .sixcol {
+    	width: 48.75%;
+  }
+
+  .sevencol {
+    	width: 57.29%;
+  }
+
+  .eightcol {
+    width: 65.83%;
+  }
+
+  .ninecol {
+    	width: 74.37%;
+  }
+
+  .tencol {
+    	width: 82.91%;
+  }
+
+  .elevencol {
+    width: 91.45%;
+  }
+
+  .twelvecol {
+    	width: 100%;
+  }
 
 
 
