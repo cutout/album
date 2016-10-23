@@ -183,7 +183,7 @@
   .filtering li .is-checked:before {
     content: "\2713"; }
 .filtering a, .filtering a:visited {
-  color: #777D85;
+  color: #888f9a;
   margin-left: 12px;
   display: inline-block;
   border-bottom: 3px solid transparent;
@@ -316,7 +316,7 @@ code {
     clear: both; }
   .row .col {
     float: left;
-    margin: 25px 3% 25px 0;
+    margin: 25px 4% 25px 0;
     display: block; }
     .row .col:last-child, .row .col.twelvecol {
       margin-right: 0; }
@@ -325,37 +325,37 @@ code {
   width: 100%; }
 
 .elevencol {
-  width: 91.41%; }
+  width: 91.33%; }
 
 .tencol {
-  width: 82.83%; }
+  width: 82.66%; }
 
 .ninecol {
-  width: 74.25%; }
+  width: 74%; }
 
 .eightcol {
-  width: 65.66%; }
+  width: 65.33%; }
 
 .sevencol {
-  width: 57.08%; }
+  width: 56.66%; }
 
 .sixcol {
-  width: 48.5%; }
+  width: 48%; }
 
 .fivecol {
-  width: 39.91%; }
+  width: 39.33%; }
 
 .fourcol {
-  width: 31.33%; }
+  width: 30.66%; }
 
 .threecol {
-  width: 22.75%; }
+  width: 22%; }
 
 .twocol {
-  width: 14.16%; }
+  width: 13.33%; }
 
 .onecol {
-  width: 5.583%; }
+  width: 4.666%; }
 
 .left {
   float: left; }
@@ -537,7 +537,7 @@ textarea {
   .branding h2 {
     font-weight: 100;
     font-family: "Inconsolata", courier;
-    color: #777D85; }
+    color: #888f9a; }
 
 .intro h3 {
   font-size: 5.4rem;
@@ -568,7 +568,7 @@ textarea {
   background: transparent;
   text-transform: capitalize;
   padding: 0;
-  color: #777D85;
+  color: #888f9a;
   display: block;
   font-size: 1.4rem;
   text-align: left;
@@ -594,7 +594,7 @@ textarea {
     .widget ul li a {
       color: inherit; }
     .widget ul li .date {
-      color: #777D85;
+      color: #888f9a;
       display: inline; }
 
 .widgets-footer {
