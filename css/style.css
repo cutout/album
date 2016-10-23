@@ -534,6 +534,9 @@ textarea {
   .branding h1 {
     font-size: 1.8rem;
     margin-bottom: 4px; }
+    .branding h1 a {
+      border: none;
+      color: inherit; }
   .branding h2 {
     font-weight: 100;
     font-family: "Inconsolata", courier;
