@@ -269,7 +269,7 @@ img {
   max-width: 100%; }
 
 .small, small {
-  font-size: 1.25rem; }
+  font-size: 1.3rem; }
 
 h1, h2, h3, h4, h5 {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -309,85 +309,53 @@ code {
   clear: both;
   margin: 0 auto;
   padding: 0 100px; }
-
-.col {
-  float: left;
-  margin: 25px 2.5% 25px 0;
-  display: block; }
-  .col:last-child, .col.twelvecol {
-    margin-right: 0; }
-
-.onecol {
-  width: 6.866%; }
-
-.twocol {
-  width: 15.33%; }
-
-.threecol {
-  width: 23.8%; }
-
-.fourcol {
-  width: 32.26%; }
-
-.fivecol {
-  width: 40.73%; }
-
-.sixcol {
-  width: 49.2%; }
-
-.sevencol {
-  width: 57.66%; }
-
-.eightcol {
-  width: 66.13%; }
-
-.ninecol {
-  width: 74.06%; }
-
-.tencol {
-  width: 83.06%; }
-
-.elevencol {
-  width: 91.53%; }
-
-.twelvecol {
-  width: auto; }
-
-.onecol {
-  width: 6.041%; }
-
-.twocol {
-  width: 14.58%; }
-
-.threecol {
-  width: 23.12%; }
-
-.fourcol {
-  width: 31.66%; }
-
-.fivecol {
-  width: 40.20%; }
-
-.sixcol {
-  width: 48.75%; }
-
-.sevencol {
-  width: 57.29%; }
-
-.eightcol {
-  width: 65.83%; }
-
-.ninecol {
-  width: 74.37%; }
-
-.tencol {
-  width: 82.91%; }
-
-.elevencol {
-  width: 91.45%; }
+  .row:before, .row:after {
+    content: "";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row .col {
+    float: left;
+    margin: 25px 3% 25px 0;
+    display: block; }
+    .row .col:last-child, .row .col.twelvecol {
+      margin-right: 0; }
 
 .twelvecol {
   width: 100%; }
+
+.elevencol {
+  width: 91.41%; }
+
+.tencol {
+  width: 82.83%; }
+
+.ninecol {
+  width: 74.25%; }
+
+.eightcol {
+  width: 65.66%; }
+
+.sevencol {
+  width: 57.08%; }
+
+.sixcol {
+  width: 48.5%; }
+
+.fivecol {
+  width: 39.91%; }
+
+.fourcol {
+  width: 31.33%; }
+
+.threecol {
+  width: 22.75%; }
+
+.twocol {
+  width: 14.16%; }
+
+.onecol {
+  width: 5.583%; }
 
 .left {
   float: left; }
@@ -567,7 +535,6 @@ textarea {
     font-size: 1.8rem;
     margin-bottom: 4px; }
   .branding h2 {
-    font-size: 1.2rem;
     font-weight: 100;
     font-family: "Inconsolata", courier;
     color: #777D85; }
