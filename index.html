@@ -23,7 +23,7 @@
 
 	<meta name="theme-color" content="">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href=" css/style.css">
 	<link rel="stylesheet" href="css/isotope.css">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -33,6 +33,7 @@
 </head>
 <body>
 	<div class="top-border"></div>
+	<div class="loader"></div>
 	<div class="bottom-border"></div>
 	<div class="left-border"></div>
 	<div class="right-border"></div>
@@ -63,6 +64,7 @@
 				<div class="filtering col twocol">
 					<div class="cats">
 						<hr />
+						<div class="widget">
 						<h4>Categories</h4>
 						<ul id="filters" class="cats button-group">
 							<li><button class="button is-checked" data-filter="*">Show All</button></li>
@@ -74,6 +76,7 @@
 						  <li><button class="button" data-filter="numberGreaterThan50">Digital</button></li>
 						  <li><button class="button" data-filter="ium">Media</button></li>
 						</ul>
+						</div>
 					</div>
 					<div class="sorting">
 						<hr />
@@ -195,8 +198,11 @@
 					    <p class="number">94</p>
 					    <p class="weight">(244)</p>
 					  </div>
-					</div>
-				</div>
+					</div><!--/grid-->
+					<a class="btn load-more">
+						↓ Load More
+					</a>
+				</div><!--/samples-->
 			</div><!--/.row-->
 
 			<div class="widgets widgets-footer">
@@ -244,7 +250,6 @@
     <script src="js/mediacheck.min.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/classie.js"></script>
-		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 		<script src='http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
 		<script src="js/isotope.js"></script>
 </body>

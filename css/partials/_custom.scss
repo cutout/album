@@ -50,10 +50,14 @@
     padding-right: 30px;
   }
 }
-.mast {
-  .col {
-    margin:0;
-  }
+
+.loader {
+  height: 3px;
+  background-color: $link-color;
+  position: fixed;
+  top:20px;
+  width:0;
+  @include animation(loading 1.3s linear forwards);
 }
 
 .branding {
@@ -71,6 +75,9 @@
     font-family: $font-family-body;
     color:$text-color-lt;
   }
+  @include screen-xs {
+    margin-top: -14px
+  }
 }
 
 .intro {
@@ -80,9 +87,12 @@
     opacity: 0;
     @include animation('fade-in linear .8s .8s forwards');
     width:75%;
-    @include screen-med {
+    @include screen-laptop {
       font-size:4rem;
       width:auto;
+    }
+    @include screen-med {
+      font-size: 3.5rem;
     }
     @include screen-sm {
       font-size: 3.2rem;
@@ -96,18 +106,17 @@
 }
 
 .filtering {
-  h4 {
-    margin-bottom: 30px;
-  }
   button {
     background: transparent;
     text-transform: capitalize;
     padding:0;
     color: $text-color-lt;
     display: block;
-    font-size:$font-smaller;
+    font-size:$font-body;
+    font-family: $font-family-body;
     text-align: left;
     margin-left: 12px;
+    font-weight: 400;
     &:focus {
       outline:none;
     }
@@ -116,11 +125,22 @@
       margin-left: 0;
     }
   }
-  li {
-    line-height: 1.2;
-  }
   .sorting {
     margin-top: 50px;
+  }
+}
+
+a.load-more,a.load-more:visited {
+  margin-top: 40px;
+  background-color: transparent;
+  border:2px solid $border-dark;
+  border-radius: 4px;
+  color: inherit;
+  padding:16px;
+  display: block;
+  &:hover,&:active {
+    background: $border-dark;
+    color: inherit;
   }
 }
 

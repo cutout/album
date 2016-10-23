@@ -12,3 +12,9 @@
   0% { margin-left: -20px; }
   100% { margin-left: 0; }
 }
+
+@include keyframes(loading) {
+  0% {width:0}
+  99% {width:100%;opacity: 1;}
+  100% {opacity: 0;}
+}

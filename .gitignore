@@ -5,18 +5,8 @@
 
 *.map
 
-*.scssc
+
+**/.sass-cache
+**/.sass-cache/*
 
 *.scssc
-
-css/.sass-cache/1c15ed41ade33d59702db543c71c272febb6d12f/_custom.scssc
-
-css/.sass-cache/1c15ed41ade33d59702db543c71c272febb6d12f/_custom.scssc
-
-css/.sass-cache/1c15ed41ade33d59702db543c71c272febb6d12f/_mixins.scssc
-
-*.map
-
-css/style.css.map
-
-*.map

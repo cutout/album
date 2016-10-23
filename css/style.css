@@ -170,7 +170,7 @@
         top: 44px; } }
     @media only screen and (max-width: 500px) {
       .menu.col .tcon {
-        top: 22px;
+        top: 13px;
         right: 30px; } }
 
 .filtering hr {
@@ -218,7 +218,7 @@ body {
   color: #111;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 1.65rem;
+  font-size: 1.6rem;
   background-color: #F1F2F6; }
 
 @media only screen and (max-width: 1140px) {
@@ -395,7 +395,9 @@ textarea {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-weight: 600;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  text-align: center; }
 
 @-webkit-keyframes fade-in {
   0% {
@@ -472,6 +474,46 @@ textarea {
     margin-left: -20px; }
   100% {
     margin-left: 0; } }
+@-webkit-keyframes loading {
+  0% {
+    width: 0; }
+  99% {
+    width: 100%;
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes loading {
+  0% {
+    width: 0; }
+  99% {
+    width: 100%;
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-ms-keyframes loading {
+  0% {
+    width: 0; }
+  99% {
+    width: 100%;
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-o-keyframes loading {
+  0% {
+    width: 0; }
+  99% {
+    width: 100%;
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes loading {
+  0% {
+    width: 0; }
+  99% {
+    width: 100%;
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 .top-border, .bottom-border,
 .left-border, .right-border {
   background: #e8e9ee;
@@ -522,8 +564,17 @@ textarea {
     padding-left: 30px;
     padding-right: 30px; } }
 
-.mast .col {
-  margin: 0; }
+.loader {
+  height: 3px;
+  background-color: #00CDED;
+  position: fixed;
+  top: 20px;
+  width: 0;
+  -webkit-animation: loading 1.3s linear forwards;
+  -moz-animation: loading 1.3s linear forwards;
+  -ms-animation: loading 1.3s linear forwards;
+  -o-animation: loading 1.3s linear forwards;
+  animation: loading 1.3s linear forwards; }
 
 .branding {
   -webkit-animation: fade-in 1.5s, slide-from-left 1.2s;
@@ -541,6 +592,9 @@ textarea {
     font-weight: 100;
     font-family: "Inconsolata", courier;
     color: #888f9a; }
+  @media only screen and (max-width: 500px) {
+    .branding {
+      margin-top: -14px; } }
 
 .intro h3 {
   font-size: 5.4rem;
@@ -552,10 +606,13 @@ textarea {
   -o-animation: fade-in linear .8s .8s forwards;
   animation: fade-in linear .8s .8s forwards;
   width: 75%; }
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 1140px) {
     .intro h3 {
       font-size: 4rem;
       width: auto; } }
+  @media only screen and (max-width: 960px) {
+    .intro h3 {
+      font-size: 3.5rem; } }
   @media only screen and (max-width: 768px) {
     .intro h3 {
       font-size: 3.2rem;
@@ -565,26 +622,36 @@ textarea {
       font-size: 2.2rem;
       margin: 23% 0 21%; } }
 
-.filtering h4 {
-  margin-bottom: 30px; }
 .filtering button {
   background: transparent;
   text-transform: capitalize;
   padding: 0;
   color: #888f9a;
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-family: "Inconsolata", courier;
   text-align: left;
-  margin-left: 12px; }
+  margin-left: 12px;
+  font-weight: 400; }
   .filtering button:focus {
     outline: none; }
   .filtering button.is-checked {
     color: inherit;
     margin-left: 0; }
-.filtering li {
-  line-height: 1.2; }
 .filtering .sorting {
   margin-top: 50px; }
+
+a.load-more, a.load-more:visited {
+  margin-top: 40px;
+  background-color: transparent;
+  border: 2px solid #D7D8E1;
+  border-radius: 4px;
+  color: inherit;
+  padding: 16px;
+  display: block; }
+  a.load-more:hover, a.load-more:active, a.load-more:visited:hover, a.load-more:visited:active {
+    background: #D7D8E1;
+    color: inherit; }
 
 .widget {
   margin-bottom: 30px; }

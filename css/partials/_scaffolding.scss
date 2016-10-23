@@ -31,7 +31,7 @@ body {
     color: $text-color;
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
-    font-size: 1.65rem;
+    font-size: $font-body;
     background-color: $bg-lt;
 }
 
@@ -209,7 +209,7 @@ code {
 }
 
 .onecol {
-  	width: 4.666%;
+  	width: 4.666%
 }
 
 
@@ -264,5 +264,7 @@ textarea {
     cursor: pointer;
     @include appearance(none);
     border:none;
-    @include small-label
+    @include small-label;
+    font-family: $font-family-display;
+    text-align: center;
 }
