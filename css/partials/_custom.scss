@@ -160,6 +160,9 @@ a.load-more,a.load-more:visited {
       margin-bottom: 15px;
       a,a:visited {
         color:inherit;
+        &:hover,&:active {
+          color: $link-color
+        }
       }
       .date {
         color: $text-color-lt;
@@ -182,7 +185,32 @@ a.load-more,a.load-more:visited {
   }
 }
 
-footer.container {
+footer.container.row {
   background: $bg-med;
   margin-top: 80px;
+  .col {
+    margin:0;
+    &.right {
+      float:right;
+    }
+  }
+}
+
+.more {
+  a,a:visited {
+    color: inherit;
+    font-size: 1.8rem;
+    border:none;
+    display: inline-block;
+    margin-left: 4px;
+    color:#fff;
+    background: $link-color;
+    width:30px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    &:hover,&:active {
+      background: $link-color-hover
+    }
+  }
 }

@@ -218,7 +218,7 @@ a, a:visited {
   text-decoration: none;
   border-bottom: 1px solid #D7D8E1; }
   a:hover, a:active, a:visited:hover, a:visited:active {
-    color: #00CDED; }
+    color: #1DDDFB; }
 
 a:hover, :focus, li:hover, img:hover, input:hover, button:hover, .btn:hover {
   -webkit-transition: all 0.3s linear;
@@ -649,6 +649,8 @@ a.load-more, a.load-more:visited {
     margin-bottom: 15px; }
     .widget ul li a, .widget ul li a:visited {
       color: inherit; }
+      .widget ul li a:hover, .widget ul li a:active, .widget ul li a:visited:hover, .widget ul li a:visited:active {
+        color: #00CDED; }
     .widget ul li .date {
       color: #888f9a;
       display: inline; }
@@ -662,8 +664,27 @@ a.load-more, a.load-more:visited {
       float: none;
       display: block; } }
 
-footer.container {
+footer.container.row {
   background: #e8e9ee;
   margin-top: 80px; }
+  footer.container.row .col {
+    margin: 0; }
+    footer.container.row .col.right {
+      float: right; }
+
+.more a, .more a:visited {
+  color: inherit;
+  font-size: 1.8rem;
+  border: none;
+  display: inline-block;
+  margin-left: 4px;
+  color: #fff;
+  background: #00CDED;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px; }
+  .more a:hover, .more a:active, .more a:visited:hover, .more a:visited:active {
+    background: #1DDDFB; }
 
 /*# sourceMappingURL=style.css.map */
