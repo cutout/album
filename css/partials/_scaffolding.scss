@@ -70,11 +70,11 @@ p {
 
 hr {
     display: block;
-    height:2px;
-    background:$border-dark;
-    color:$border-dark;
-    border:0;
+    border:none;
+    border-bottom: 2px solid $border-dark;
+    height:0;
     clear: both;
+    box-sizing: content-box;
     &.small {
       height: 1px;
     }
