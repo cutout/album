@@ -306,9 +306,6 @@ pre {
   line-height: 1.5;
   font-size: 1.85rem; }
 
-article {
-  margin: 5% 0; }
-
 sub, sup {
   font-size: 12px;
   font-size: 0.75rem;
@@ -712,13 +709,6 @@ a.load-more, a.load-more:visited {
 .page.col {
   margin: 0; }
 
-.sidebar.col {
-  float: right;
-  margin: 0; }
-  .sidebar.col .widget {
-    background-color: #e8e9ee;
-    padding: 50px; }
-
 .widgets-footer {
   margin-top: 5%; }
   .widgets-footer hr {
@@ -779,26 +769,37 @@ footer .col {
   font-size: 5rem;
   margin-bottom: 3%; }
 
-article h1, article h2, article h3, article h4, article h5, article h6 {
-  margin-top: 3rem; }
-article hr {
-  margin: 3rem auto; }
-article dl, article ul, article ol {
-  clear: both; }
-article ul, article ol {
-  margin: 0 0 1.5rem 1.5rem;
-  padding: 0; }
-article ul {
-  list-style: disc; }
-article ol {
-  list-style: decimal; }
-article ol ol, article ul ul, article li {
-  margin-top: 1.2rem; }
-article dl dt {
-  font-weight: bold; }
-article dl dd {
-  margin: 0 1.5rem 1.5rem 1.5rem; }
-article p img {
-  vertical-align: middle; }
+article {
+  width: 66.66667%; }
+  article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin-top: 3rem; }
+  article hr {
+    margin: 3rem auto; }
+  article dl, article ul, article ol {
+    clear: both; }
+  article ul, article ol {
+    margin: 0 0 1.5rem 1.5rem;
+    padding: 0; }
+  article ul {
+    list-style: disc; }
+  article ol {
+    list-style: decimal; }
+  article ol ol, article ul ul, article li {
+    margin-top: 1.2rem; }
+  article dl dt {
+    font-weight: bold; }
+  article dl dd {
+    margin: 0 1.5rem 1.5rem 1.5rem; }
+  article p img {
+    vertical-align: middle; }
+
+.sidebar {
+  width: 33.33333%;
+  float: right;
+  min-height: 1em;
+  padding: 0 4%; }
+  .sidebar .widget {
+    background-color: #e8e9ee;
+    padding: 50px; }
 
 /*# sourceMappingURL=style.css.map */
