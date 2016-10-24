@@ -82,7 +82,7 @@
 
 .intro {
   h3 {
-    font-size: 5.4rem;
+    font-size: $font-giant;
     margin:10% 0 15%;
     @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
     width:75%;
@@ -178,10 +178,8 @@ a.load-more,a.load-more:visited {
   margin:0;
 }
 
-
-
 .widgets-footer {
-  margin-top: 5%;
+  margin-top: 2%;
   hr {
     margin:5% 0;
   }
@@ -257,7 +255,7 @@ footer {
 
 .pagetitle {
   h2 {
-    font-size: 5rem;
+    font-size: $font-giant;
     margin-bottom: 3%;
   }
 }
@@ -307,7 +305,9 @@ article {
   min-height: 1em;
   padding:0 4%;
   .widget {
-    background-color: $bg-med;
-    padding:$screen-padding-sm
+    /*background-color: $bg-med;
+    padding:$screen-padding-sm;
+    border-top:3px solid #b3b4b9;
+    */
   }
 }

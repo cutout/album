@@ -185,7 +185,8 @@ TABLE OF CONTENTS
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  text-rendering: optimizelegibility; }
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -710,7 +711,7 @@ a.load-more, a.load-more:visited {
   margin: 0; }
 
 .widgets-footer {
-  margin-top: 5%; }
+  margin-top: 2%; }
   .widgets-footer hr {
     margin: 5% 0; }
   @media only screen and (max-width: 768px) {
@@ -766,7 +767,7 @@ footer .col {
   margin-top: 5%; }
 
 .pagetitle h2 {
-  font-size: 5rem;
+  font-size: 5.4rem;
   margin-bottom: 3%; }
 
 article {
@@ -799,7 +800,9 @@ article {
   min-height: 1em;
   padding: 0 4%; }
   .sidebar .widget {
-    background-color: #e8e9ee;
-    padding: 50px; }
+    /*background-color: $bg-med;
+    padding:$screen-padding-sm;
+    border-top:3px solid #b3b4b9;
+    */ }
 
 /*# sourceMappingURL=style.css.map */
