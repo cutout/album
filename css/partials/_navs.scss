@@ -135,6 +135,9 @@
         &:last-child {
           margin-right: 0;
         }
+        &.current_page_item {
+          @include fat-border-hover
+        }
         a,a:visited {
             text-decoration: none;
             color:inherit;
@@ -175,13 +178,4 @@
             right:30px;
         }
       }
-}
-
-
-//Sidebar Menu
-
-.filtering {
-  hr {
-    margin-bottom: 20px;
-  }
 }

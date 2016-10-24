@@ -133,8 +133,8 @@
 }
 
 @mixin fat-border-hover {
-  border-bottom: 3px solid $link-color;
-  box-shadow: inset 0 -5px 0 $link-color;
+  border-bottom: 3px solid $highlight;
+  box-shadow: inset 0 -5px 0 $highlight;
 }
 
 

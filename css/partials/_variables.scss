@@ -1,30 +1,30 @@
 // Grid & Structure //
 	$content-width:			1140px;
-	$screen-padding-large:100px;
+	$screen-padding-large:80px;
 	$screen-padding-sm:	50px;
 	$screen-padding-xs:		30px;
 
 
 // Colors //
-	$text-color:			#111;
-	$text-color-lt:			#888f9a;
+	$text-color:			#252627;
+	$text-color-lt:		#5b616b;
 
-	$link-color:			#00c9e8;
-	$link-color-hover:	#1DDDFB;
+	$link-color:			#004e77;
+	$link-color-hover:	lighten($link-color, 8%);
 
 	$border-lt:				#d7d7d7;
-	$border-dark:			#D7D8E1;
+	$border-dark:			#bfc1cc;
 
 	$bg-lt:					#F1F2F6;
 	$bg-med:				#e8e9ee;
-	$bg-dark:				#333;
 
-	$highlight:				#fdcf54;
+	$highlight:				#00CDED;
 
 
 // Type //
 	$font-family-display:	'Roboto','Helvetica Neue', sans-serif;
 	$font-family-body:		'Inconsolata',courier;
 
+	$font-bigger:					1.85rem;
 	$font-body:						1.6rem;
 	$font-smaller:				1.4rem;

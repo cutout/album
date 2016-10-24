@@ -63,14 +63,14 @@
 .branding {
   @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
   h1 {
-    font-size: 1.8rem;
+    font-size: $font-bigger;
     margin-bottom: 4px;
     a {
       border:none;
       color: inherit;
     }
   }
-  h2 {
+  .small {
     font-weight: 100;
     font-family: $font-family-body;
     color:$text-color-lt;
@@ -129,9 +129,6 @@
       }
     }
   }
-  .sorting {
-    margin-top: 50px;
-  }
 }
 
 .filtering.col,.samples.col {
@@ -156,26 +153,37 @@ a.load-more,a.load-more:visited {
 }
 
 .widget {
-  margin-bottom:30px;
+  margin-bottom:50px;
   h4 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: $font-bigger
+  }
+  hr {
+    margin-bottom: 30px;
   }
   ul {
     li {
       list-style: none;
       line-height: 1.35;
       margin-bottom: 15px;
-      a,a:visited {
-        color:inherit;
-        &:hover,&:active {
-          color: $link-color
-        }
-      }
       .date {
         color: $text-color-lt;
         display: inline;
       }
     }
+  }
+}
+
+.page.col {
+  margin:0;
+}
+
+.sidebar.col {
+  float:right;
+  margin:0;
+  .widget {
+    background-color: $bg-med;
+    padding:$screen-padding-sm
   }
 }
 
@@ -246,6 +254,58 @@ footer {
     line-height: 30px;
     &:hover,&:active {
       background: $link-color-hover
+    }
+  }
+}
+
+.main {
+  margin-top:5%;
+}
+
+.pagetitle {
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 3%;
+  }
+  hr {
+    margin-bottom: 4%;
+  }
+}
+
+article {
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 3rem;
+  }
+  hr {
+    margin:3rem auto
+  }
+  dl,ul,ol {
+    clear:both
+  }
+  ul,ol {
+    margin: 0 0 1.5rem 1.5rem;
+    padding: 0;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+  ol ol, ul ul, li {
+    margin-top: 1.2rem;
+  }
+  dl {
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      margin:0 1.5rem 1.5rem 1.5rem
+    }
+  }
+  p {
+    img {
+      vertical-align: middle;
     }
   }
 }

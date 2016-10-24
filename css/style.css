@@ -134,14 +134,17 @@
     margin: 0 20px; }
     .menu.col li:last-child {
       margin-right: 0; }
+    .menu.col li.current_page_item {
+      border-bottom: 3px solid #00CDED;
+      box-shadow: inset 0 -5px 0 #00CDED; }
     .menu.col li a, .menu.col li a:visited {
       text-decoration: none;
       color: inherit;
       border-bottom: 3px solid transparent;
       box-shadow: none; }
       .menu.col li a:hover, .menu.col li a:visited:hover {
-        border-bottom: 3px solid #00c9e8;
-        box-shadow: inset 0 -5px 0 #00c9e8; }
+        border-bottom: 3px solid #00CDED;
+        box-shadow: inset 0 -5px 0 #00CDED; }
       @media only screen and (max-width: 768px) {
         .menu.col li a, .menu.col li a:visited {
           color: #fff;
@@ -159,7 +162,7 @@
     position: absolute;
     top: 94px;
     z-index: 3;
-    right: 100px; }
+    right: 80px; }
     @media only screen and (max-width: 960px) {
       .menu.col .tcon {
         top: 92px; } }
@@ -172,9 +175,6 @@
       .menu.col .tcon {
         top: 11px;
         right: 30px; } }
-
-.filtering hr {
-  margin-bottom: 20px; }
 
 /*
 TABLE OF CONTENTS
@@ -199,11 +199,14 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #111;
+  color: #252627;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 1.6rem;
   background-color: #F1F2F6; }
+
+body, html {
+  direction: ltr; }
 
 @media only screen and (max-width: 1140px) {
   .wrapper {
@@ -214,11 +217,11 @@ body, input, textarea, select, button {
   font-family: "Inconsolata", courier; }
 
 a, a:visited {
-  color: #00c9e8;
+  color: #004e77;
   text-decoration: none;
-  border-bottom: 1px solid #D7D8E1; }
+  border-bottom: 1px solid #bfc1cc; }
   a:hover, a:active, a:visited:hover, a:visited:active {
-    color: #1DDDFB; }
+    color: #0069a0; }
 
 a:hover, :focus, li:hover, img:hover, input:hover, button:hover, .btn:hover {
   -webkit-transition: all 0.3s linear;
@@ -228,16 +231,18 @@ a:hover, :focus, li:hover, img:hover, input:hover, button:hover, .btn:hover {
   transition: all 0.3s linear; }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   line-height: 145%; }
 
 hr {
   display: block;
   height: 2px;
-  background: #D7D8E1;
-  color: #D7D8E1;
+  background: #bfc1cc;
+  color: #bfc1cc;
   border: 0;
   clear: both; }
+  hr.small {
+    height: 1px; }
 
 figure {
   position: relative;
@@ -258,7 +263,8 @@ img {
 h1, h2, h3, h4, h5 {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  margin: 0 0 1.2rem 0; }
 
 h1 {
   font-size: 2.4rem; }
@@ -279,20 +285,63 @@ h6 {
   font-size: .8rem; }
 
 blockquote {
-  margin: 25px 45px; }
+  margin: 25px 45px;
+  border-left: 3px solid #bfc1cc;
+  padding-left: 25px;
+  color: #5b616b; }
 
-pre, code {
-  font: 1.25rem "Courier New", Courier, monospace; }
+pre {
+  margin: 3rem 0;
+  background: #1a1a1a;
+  color: #00CDED;
+  padding: 1.5rem 1.5rem;
+  overflow: auto;
+  display: block;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  line-height: 1.5;
+  font-size: 1.85rem; }
 
-code {
-  background: #F1F2F6;
-  padding: 10px;
-  display: block; }
+article {
+  margin: 5% 0; }
+
+sub, sup {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: 100%; }
+  table th, table caption {
+    line-height: 1.75;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+    font-weight: 600; }
+  table td {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.3);
+    vertical-align: top; }
 
 .row {
   clear: both;
   margin: 0 auto;
-  padding: 0 100px; }
+  padding: 0 80px; }
   .row:before, .row:after {
     content: "";
     display: table; }
@@ -300,7 +349,7 @@ code {
     clear: both; }
   @media only screen and (min-width: 1140px) {
     .row {
-      max-width: 1440px; } }
+      max-width: 1420px; } }
   .row .col {
     float: left;
     margin: 25px 4% 25px 0;
@@ -356,9 +405,9 @@ code {
   clear: both; }
 
 input[type=text], input[type=email], input[type=password], textarea {
-  border-style: 1px solid #D7D8E1;
+  border-style: 1px solid #bfc1cc;
   padding: 8px;
-  color: #111;
+  color: #252627;
   -webkit-appearance: none; }
 
 input:focus, textarea:focus {
@@ -534,7 +583,7 @@ textarea {
   right: 0; }
 
 .container {
-  padding: 100px; }
+  padding: 80px; }
   @media only screen and (max-width: 768px) {
     .container {
       padding: 50px; } }
@@ -553,7 +602,7 @@ textarea {
 
 .loader {
   height: 3px;
-  background-color: #00c9e8;
+  background-color: #004e77;
   position: fixed;
   top: 20px;
   width: 0;
@@ -570,15 +619,15 @@ textarea {
   -o-animation: fade-in 1.2s, slide-from-left 1.2s;
   animation: fade-in 1.2s, slide-from-left 1.2s; }
   .branding h1 {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
     margin-bottom: 4px; }
     .branding h1 a {
       border: none;
       color: inherit; }
-  .branding h2 {
+  .branding .small {
     font-weight: 100;
     font-family: "Inconsolata", courier;
-    color: #888f9a; }
+    color: #5b616b; }
   @media only screen and (max-width: 500px) {
     .branding {
       margin-top: -14px; } }
@@ -612,7 +661,7 @@ textarea {
   background: transparent;
   text-transform: capitalize;
   padding: 0 0 0 14px;
-  color: #888f9a;
+  color: #5b616b;
   display: block;
   font-size: 1.6rem;
   font-family: "Inconsolata", courier;
@@ -627,8 +676,6 @@ textarea {
     .filtering.col button.is-checked:before {
       content: "\2713 ";
       margin-left: -14px; }
-.filtering.col .sorting {
-  margin-top: 50px; }
 
 @media only screen and (max-width: 960px) {
   .filtering.col, .samples.col {
@@ -638,30 +685,39 @@ textarea {
 a.load-more, a.load-more:visited {
   margin-top: 40px;
   background-color: transparent;
-  border: 2px solid #D7D8E1;
+  border: 2px solid #bfc1cc;
   border-radius: 4px;
   color: inherit;
   padding: 16px;
   display: block; }
   a.load-more:hover, a.load-more:active, a.load-more:visited:hover, a.load-more:visited:active {
-    background: #D7D8E1;
+    background: #bfc1cc;
     color: inherit; }
 
 .widget {
-  margin-bottom: 30px; }
+  margin-bottom: 50px; }
   .widget h4 {
-    margin-bottom: 20px; }
+    margin-bottom: 25px;
+    font-size: 1.85rem; }
+  .widget hr {
+    margin-bottom: 30px; }
   .widget ul li {
     list-style: none;
     line-height: 1.35;
     margin-bottom: 15px; }
-    .widget ul li a, .widget ul li a:visited {
-      color: inherit; }
-      .widget ul li a:hover, .widget ul li a:active, .widget ul li a:visited:hover, .widget ul li a:visited:active {
-        color: #00c9e8; }
     .widget ul li .date {
-      color: #888f9a;
+      color: #5b616b;
       display: inline; }
+
+.page.col {
+  margin: 0; }
+
+.sidebar.col {
+  float: right;
+  margin: 0; }
+  .sidebar.col .widget {
+    background-color: #e8e9ee;
+    padding: 50px; }
 
 .widgets-footer {
   margin-top: 5%; }
@@ -680,7 +736,7 @@ a.load-more, a.load-more:visited {
   padding: 50px; }
   @media only screen and (min-width: 1140px) {
     .container.bottom {
-      padding: 100px; } }
+      padding: 80px; } }
 
 footer .col {
   margin: 0; }
@@ -708,12 +764,43 @@ footer .col {
   display: inline-block;
   margin-left: 4px;
   color: #fff;
-  background: #00c9e8;
+  background: #004e77;
   width: 30px;
   height: 30px;
   text-align: center;
   line-height: 30px; }
   .more a:hover, .more a:active, .more a:visited:hover, .more a:visited:active {
-    background: #1DDDFB; }
+    background: #0069a0; }
+
+.main {
+  margin-top: 5%; }
+
+.pagetitle h2 {
+  font-size: 5rem;
+  margin-bottom: 3%; }
+.pagetitle hr {
+  margin-bottom: 4%; }
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  margin-top: 3rem; }
+article hr {
+  margin: 3rem auto; }
+article dl, article ul, article ol {
+  clear: both; }
+article ul, article ol {
+  margin: 0 0 1.5rem 1.5rem;
+  padding: 0; }
+article ul {
+  list-style: disc; }
+article ol {
+  list-style: decimal; }
+article ol ol, article ul ul, article li {
+  margin-top: 1.2rem; }
+article dl dt {
+  font-weight: bold; }
+article dl dd {
+  margin: 0 1.5rem 1.5rem 1.5rem; }
+article p img {
+  vertical-align: middle; }
 
 /*# sourceMappingURL=style.css.map */
