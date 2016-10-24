@@ -140,8 +140,8 @@
       border-bottom: 3px solid transparent;
       box-shadow: none; }
       .menu.col li a:hover, .menu.col li a:visited:hover {
-        border-bottom: 3px solid #00CDED;
-        box-shadow: inset 0 -5px 0 #00CDED; }
+        border-bottom: 3px solid #00c9e8;
+        box-shadow: inset 0 -5px 0 #00c9e8; }
       @media only screen and (max-width: 768px) {
         .menu.col li a, .menu.col li a:visited {
           color: #fff;
@@ -170,7 +170,7 @@
         top: 44px; } }
     @media only screen and (max-width: 500px) {
       .menu.col .tcon {
-        top: 13px;
+        top: 11px;
         right: 30px; } }
 
 .filtering hr {
@@ -214,7 +214,7 @@ body, input, textarea, select, button {
   font-family: "Inconsolata", courier; }
 
 a, a:visited {
-  color: #00CDED;
+  color: #00c9e8;
   text-decoration: none;
   border-bottom: 1px solid #D7D8E1; }
   a:hover, a:active, a:visited:hover, a:visited:active {
@@ -298,6 +298,9 @@ code {
     display: table; }
   .row:after {
     clear: both; }
+  @media only screen and (min-width: 1140px) {
+    .row {
+      max-width: 1440px; } }
   .row .col {
     float: left;
     margin: 25px 4% 25px 0;
@@ -550,7 +553,7 @@ textarea {
 
 .loader {
   height: 3px;
-  background-color: #00CDED;
+  background-color: #00c9e8;
   position: fixed;
   top: 20px;
   width: 0;
@@ -605,7 +608,7 @@ textarea {
       font-size: 2.2rem;
       margin: 23% 0 21%; } }
 
-.filtering button {
+.filtering.col button {
   background: transparent;
   text-transform: capitalize;
   padding: 0 0 0 14px;
@@ -615,17 +618,22 @@ textarea {
   font-family: "Inconsolata", courier;
   text-align: left;
   font-weight: 400; }
-  .filtering button:focus {
+  .filtering.col button:focus {
     outline: none; }
-  .filtering button:hover, .filtering button:focus {
+  .filtering.col button:hover, .filtering.col button:focus {
     color: inherit; }
-  .filtering button.is-checked {
+  .filtering.col button.is-checked {
     color: inherit; }
-    .filtering button.is-checked:before {
+    .filtering.col button.is-checked:before {
       content: "\2713 ";
       margin-left: -14px; }
-.filtering .sorting {
+.filtering.col .sorting {
   margin-top: 50px; }
+
+@media only screen and (max-width: 960px) {
+  .filtering.col, .samples.col {
+    float: none;
+    width: 100%; } }
 
 a.load-more, a.load-more:visited {
   margin-top: 40px;
@@ -650,7 +658,7 @@ a.load-more, a.load-more:visited {
     .widget ul li a, .widget ul li a:visited {
       color: inherit; }
       .widget ul li a:hover, .widget ul li a:active, .widget ul li a:visited:hover, .widget ul li a:visited:active {
-        color: #00CDED; }
+        color: #00c9e8; }
     .widget ul li .date {
       color: #888f9a;
       display: inline; }
@@ -660,17 +668,38 @@ a.load-more, a.load-more:visited {
   .widgets-footer hr {
     margin: 5% 0; }
   @media only screen and (max-width: 768px) {
-    .widgets-footer .widget {
+    .widgets-footer .widget.col {
       float: none;
-      display: block; } }
+      display: block;
+      width: 100%;
+      margin-bottom: 40px; } }
 
-footer.container.row {
+.container.bottom {
   background: #e8e9ee;
-  margin-top: 80px; }
-  footer.container.row .col {
-    margin: 0; }
-    footer.container.row .col.right {
-      float: right; }
+  margin-top: 80px;
+  padding: 50px; }
+  @media only screen and (min-width: 1140px) {
+    .container.bottom {
+      padding: 100px; } }
+
+footer .col {
+  margin: 0; }
+  footer .col.right {
+    float: right; }
+@media only screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+    padding: 50px; }
+    footer .col, footer .col.right {
+      float: none; }
+    footer .more {
+      margin-bottom: 20px; }
+    footer .copy, footer .email {
+      display: block; }
+    footer .copy {
+      margin-bottom: 5px; }
+    footer .divider {
+      display: none; } }
 
 .more a, .more a:visited {
   color: inherit;
@@ -679,7 +708,7 @@ footer.container.row {
   display: inline-block;
   margin-left: 4px;
   color: #fff;
-  background: #00CDED;
+  background: #00c9e8;
   width: 30px;
   height: 30px;
   text-align: center;

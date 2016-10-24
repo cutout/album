@@ -155,6 +155,9 @@ code {
     &:after {
       clear:both;
     }
+    @include screen-large {
+      max-width:1440px;
+    }
   .col {
       float: left;
       margin:25px 4% 25px 0;
