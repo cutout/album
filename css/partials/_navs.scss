@@ -112,7 +112,7 @@
     text-align: right;
     height: auto;
     ul {
-        @include animation(('fade-in 1.5s','slide-from-right 1.2s'));
+        @include animation(('fade-in 1.2s','slide-from-right 1.2s'));
         @include screen-sm {
             display:none;
             padding:20px 0;
@@ -183,26 +183,5 @@
 .filtering {
   hr {
     margin-bottom: 20px;
-  }
-  ul {
-    margin-bottom: 40px;
-  }
-  li {
-    list-style: none;
-    margin:15px 0;
-    .is-checked {
-      &:before {
-        content: "\2713";
-      }
-    }
-  }
-  a,a:visited {
-    color:$text-color-lt;
-    margin-left: 12px;
-    display: inline-block;
-    @include fat-border;
-    &:hover,&:active {
-      @include fat-border-hover;
-    }
   }
 }

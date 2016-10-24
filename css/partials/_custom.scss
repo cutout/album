@@ -1,6 +1,6 @@
 .top-border,.bottom-border,
 .left-border,.right-border {
-  background: #e8e9ee;
+  background: $bg-med;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -61,7 +61,7 @@
 }
 
 .branding {
-  @include animation(('fade-in 1.5s','slide-from-left 1.2s'));
+  @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
   h1 {
     font-size: 1.8rem;
     margin-bottom: 4px;
@@ -84,8 +84,7 @@
   h3 {
     font-size: 5.4rem;
     margin:10% 0 15%;
-    opacity: 0;
-    @include animation('fade-in linear .8s .8s forwards');
+    @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
     width:75%;
     @include screen-laptop {
       font-size:4rem;
@@ -109,20 +108,25 @@
   button {
     background: transparent;
     text-transform: capitalize;
-    padding:0;
+    padding:0 0 0 14px;
     color: $text-color-lt;
     display: block;
     font-size:$font-body;
     font-family: $font-family-body;
     text-align: left;
-    margin-left: 12px;
     font-weight: 400;
     &:focus {
       outline:none;
     }
+    &:hover,&:focus {
+      color: inherit;
+    }
     &.is-checked {
       color: inherit;
-      margin-left: 0;
+      &:before {
+        content: "\2713 ";
+        margin-left: -14px;
+      }
     }
   }
   .sorting {
@@ -154,7 +158,7 @@ a.load-more,a.load-more:visited {
       list-style: none;
       line-height: 1.35;
       margin-bottom: 15px;
-      a {
+      a,a:visited {
         color:inherit;
       }
       .date {
@@ -166,7 +170,7 @@ a.load-more,a.load-more:visited {
 }
 
 .widgets-footer {
-  margin-top: 10%;
+  margin-top: 5%;
   hr {
     margin:5% 0;
   }
@@ -176,4 +180,9 @@ a.load-more,a.load-more:visited {
       display: block;
     }
   }
+}
+
+footer.container {
+  background: $bg-med;
+  margin-top: 80px;
 }

@@ -55,7 +55,7 @@ a, a:visited {
     }
 }
 
-a:hover, :focus, li:hover, img:hover, input:hover {
+a:hover, :focus, li:hover, img:hover, input:hover,button:hover,.btn:hover {
     @include transition(all 0.3s linear);
 }
 

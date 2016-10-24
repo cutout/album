@@ -105,11 +105,11 @@
   text-align: right;
   height: auto; }
   .menu.col ul {
-    -webkit-animation: fade-in 1.5s, slide-from-right 1.2s;
-    -moz-animation: fade-in 1.5s, slide-from-right 1.2s;
-    -ms-animation: fade-in 1.5s, slide-from-right 1.2s;
-    -o-animation: fade-in 1.5s, slide-from-right 1.2s;
-    animation: fade-in 1.5s, slide-from-right 1.2s; }
+    -webkit-animation: fade-in 1.2s, slide-from-right 1.2s;
+    -moz-animation: fade-in 1.2s, slide-from-right 1.2s;
+    -ms-animation: fade-in 1.2s, slide-from-right 1.2s;
+    -o-animation: fade-in 1.2s, slide-from-right 1.2s;
+    animation: fade-in 1.2s, slide-from-right 1.2s; }
     @media only screen and (max-width: 768px) {
       .menu.col ul {
         display: none;
@@ -175,22 +175,6 @@
 
 .filtering hr {
   margin-bottom: 20px; }
-.filtering ul {
-  margin-bottom: 40px; }
-.filtering li {
-  list-style: none;
-  margin: 15px 0; }
-  .filtering li .is-checked:before {
-    content: "\2713"; }
-.filtering a, .filtering a:visited {
-  color: #888f9a;
-  margin-left: 12px;
-  display: inline-block;
-  border-bottom: 3px solid transparent;
-  box-shadow: none; }
-  .filtering a:hover, .filtering a:active, .filtering a:visited:hover, .filtering a:visited:active {
-    border-bottom: 3px solid #00CDED;
-    box-shadow: inset 0 -5px 0 #00CDED; }
 
 /*
 TABLE OF CONTENTS
@@ -236,7 +220,7 @@ a, a:visited {
   a:hover, a:active, a:visited:hover, a:visited:active {
     color: #00CDED; }
 
-a:hover, :focus, li:hover, img:hover, input:hover {
+a:hover, :focus, li:hover, img:hover, input:hover, button:hover, .btn:hover {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
@@ -577,11 +561,11 @@ textarea {
   animation: loading 1.3s linear forwards; }
 
 .branding {
-  -webkit-animation: fade-in 1.5s, slide-from-left 1.2s;
-  -moz-animation: fade-in 1.5s, slide-from-left 1.2s;
-  -ms-animation: fade-in 1.5s, slide-from-left 1.2s;
-  -o-animation: fade-in 1.5s, slide-from-left 1.2s;
-  animation: fade-in 1.5s, slide-from-left 1.2s; }
+  -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
+  -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
+  -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
+  -o-animation: fade-in 1.2s, slide-from-left 1.2s;
+  animation: fade-in 1.2s, slide-from-left 1.2s; }
   .branding h1 {
     font-size: 1.8rem;
     margin-bottom: 4px; }
@@ -599,12 +583,11 @@ textarea {
 .intro h3 {
   font-size: 5.4rem;
   margin: 10% 0 15%;
-  opacity: 0;
-  -webkit-animation: fade-in linear .8s .8s forwards;
-  -moz-animation: fade-in linear .8s .8s forwards;
-  -ms-animation: fade-in linear .8s .8s forwards;
-  -o-animation: fade-in linear .8s .8s forwards;
-  animation: fade-in linear .8s .8s forwards;
+  -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
+  -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
+  -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
+  -o-animation: fade-in 1.2s, slide-from-left 1.2s;
+  animation: fade-in 1.2s, slide-from-left 1.2s;
   width: 75%; }
   @media only screen and (max-width: 1140px) {
     .intro h3 {
@@ -625,19 +608,22 @@ textarea {
 .filtering button {
   background: transparent;
   text-transform: capitalize;
-  padding: 0;
+  padding: 0 0 0 14px;
   color: #888f9a;
   display: block;
   font-size: 1.6rem;
   font-family: "Inconsolata", courier;
   text-align: left;
-  margin-left: 12px;
   font-weight: 400; }
   .filtering button:focus {
     outline: none; }
+  .filtering button:hover, .filtering button:focus {
+    color: inherit; }
   .filtering button.is-checked {
-    color: inherit;
-    margin-left: 0; }
+    color: inherit; }
+    .filtering button.is-checked:before {
+      content: "\2713 ";
+      margin-left: -14px; }
 .filtering .sorting {
   margin-top: 50px; }
 
@@ -661,19 +647,23 @@ a.load-more, a.load-more:visited {
     list-style: none;
     line-height: 1.35;
     margin-bottom: 15px; }
-    .widget ul li a {
+    .widget ul li a, .widget ul li a:visited {
       color: inherit; }
     .widget ul li .date {
       color: #888f9a;
       display: inline; }
 
 .widgets-footer {
-  margin-top: 10%; }
+  margin-top: 5%; }
   .widgets-footer hr {
     margin: 5% 0; }
   @media only screen and (max-width: 768px) {
     .widgets-footer .widget {
       float: none;
       display: block; } }
+
+footer.container {
+  background: #e8e9ee;
+  margin-top: 80px; }
 
 /*# sourceMappingURL=style.css.map */
