@@ -126,7 +126,7 @@
             height: 100vh;
             padding-top: 20%;
             z-index: 2;
-            @include animation(('fade-in 0','slide-from-right 0'));
+            @include animation(('fade-in .4s','slide-from-right 0'));
         }
     }
     li {
@@ -136,7 +136,11 @@
           margin-right: 0;
         }
         &.current_page_item {
-          @include fat-border-hover
+          @include fat-border-hover;
+          @include screen-sm {
+            border:none;
+            box-shadow: none;
+          }
         }
         a,a:visited {
             text-decoration: none;

@@ -82,12 +82,11 @@
 
 .intro {
   h3 {
-    font-size: $font-giant;
+    font-size: $font-head-tablet;
     margin:10% 0 15%;
     @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
     width:75%;
     @include screen-laptop {
-      font-size:4rem;
       width:auto;
     }
     @include screen-med {
@@ -105,6 +104,7 @@
 }
 
 .filtering.col {
+  width:20%;
   button {
     background: transparent;
     text-transform: capitalize;
@@ -133,9 +133,12 @@
 
 .filtering.col,.samples.col {
   @include screen-med {
-    float:none;
-    width:100%;
+    @include stack;
   }
+}
+
+.samples.col {
+  width: 76%;
 }
 
 a.load-more,a.load-more:visited {
@@ -224,6 +227,9 @@ footer {
     .copy {
       margin-bottom: 5px;
     }
+    .col.contact {
+      float: none;
+    }
     .divider {
       display: none;
     }
@@ -257,11 +263,20 @@ footer {
   h2 {
     font-size: $font-giant;
     margin-bottom: 3%;
+    @include screen-sm {
+      font-size: $font-head-tablet;
+      text-align: center;
+      margin:12% 0 10%;
+    }
   }
 }
 
 article {
   width:66.66667%;
+  float:left;
+  @include screen-sm {
+    @include stack;
+  }
   h1,h2,h3,h4,h5,h6 {
     margin-top: 3rem;
   }
@@ -289,7 +304,8 @@ article {
       font-weight: bold;
     }
     dd {
-      margin:0 1.5rem 1.5rem 1.5rem
+      margin:0 1.5rem 1.5rem 1.5rem;
+      line-height: 1.4;
     }
   }
   p {
@@ -309,5 +325,8 @@ article {
     padding:$screen-padding-sm;
     border-top:3px solid #b3b4b9;
     */
+  }
+  @include screen-sm {
+    @include stack;
   }
 }
