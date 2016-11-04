@@ -27,7 +27,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
-	<script src="js/modernizer.custom.js"></script>
+	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 	<div class="top-border"></div>
@@ -47,6 +47,8 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
+						<li><a href="#">Contact</a></li>
+						<li class="search"><img src="img/magnify.svg" /></li>
         </ul>
         <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
             <span class="tcon-menu__lines" aria-hidden="true"></span>
@@ -60,10 +62,9 @@
 			<div class="row work">
 				<div class="filtering col twocol">
 					<div class="cats">
-
 						<div class="widget">
-							<hr />
 							<h4>Categories</h4>
+							<hr />
 							<ul id="filters" class="cats button-group">
 								<li><button class="button is-checked" data-filter="*">Show All</button></li>
 							  <li><button class="button" data-filter=".metal">Fine Art</button></li>
@@ -77,8 +78,8 @@
 							</div>
 					</div>
 					<div class="widget">
-							<hr />
 							<h4>Sorting</h4>
+							<hr />
 							<ul class="button-group">
 								<li><button class="button is-checked" data-filter="*">Newest</button></li>
 								<li><button class="button" data-filter=".metal">Oldest</button></li>
@@ -206,9 +207,10 @@
 			<div class="widgets widgets-footer">
 				<div class="row"><hr /></div>
 				<div class="row">
-					<div class="col fourcol widget">
+					<div class="col fourcol widget widget_recent_entries">
 						<h4>From the Blog</h4>
-						<ul class="recent-posts">
+						<hr />
+						<ul>
 							<li>
 								<a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit</a>
 								<div class="date small">Dec 12</div>
@@ -225,12 +227,14 @@
 					</div>
 					<div class="col fourcol widget">
 						<h4>Latest Tweet</h4>
+						<hr />
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies rutrum nulla sed venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 						</p>
 					</div>
 					<div class="col fourcol widget">
 						<h4>Search</h4>
+						<hr />
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies rutrum nulla sed venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 						</p>
@@ -241,13 +245,13 @@
 			<footer class="container bottom">
 				<div class="row">
 					<div class="col more right">
-						<a href="#">
+						<a href="#" class="no-border">
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</a>
-						<a href="#">
+						<a href="#" class="no-border">
 							<i class="fa fa-facebook" aria-hidden="true"></i>
 						</a>
-						<a href="#">
+						<a href="#" class="no-border">
 							<i class="fa fa-dribbble" aria-hidden="true"></i>
 						</a>
 					</div>

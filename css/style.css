@@ -141,6 +141,11 @@
         .menu.col li.current_page_item {
           border: none;
           box-shadow: none; } }
+    .menu.col li.search img {
+      opacity: .75;
+      cursor: pointer; }
+      .menu.col li.search img:hover {
+        opacity: 1; }
     .menu.col li a, .menu.col li a:visited {
       text-decoration: none;
       color: inherit;
@@ -224,16 +229,23 @@ body, input, textarea, select, button {
 a, a:visited {
   color: #0278b5;
   text-decoration: none;
-  border-bottom: 1px solid #bfc1cc; }
+  border-bottom: 3px solid transparent;
+  box-shadow: none; }
   a:hover, a:active, a:visited:hover, a:visited:active {
-    color: #0293dd; }
+    color: #0293dd;
+    border-bottom: 3px solid #58c6ff;
+    box-shadow: inset 0 -5px 0 #58c6ff; }
 
-a:hover, :focus, li:hover, img:hover, input:hover, button:hover, .btn:hover {
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear; }
+a.no-border, .blog a.post, .blog a.post:visited, .blog.archives .excerpt a, .blog.archives .excerpt a:visited {
+  border: none;
+  box-shadow: none; }
+
+a, li, img, input, button, .btn, p, h3 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 p {
   margin-bottom: 25px;
@@ -293,7 +305,7 @@ blockquote {
   margin: 25px 45px;
   border-left: 3px solid #bfc1cc;
   padding-left: 25px;
-  color: #5b616b; }
+  color: #737d8d; }
 
 pre {
   margin: 3rem 0;
@@ -402,7 +414,7 @@ table {
 .right {
   float: right; }
 
-.clearfix:after, .bar:after, .row:after {
+.clearfix:after, .bar:after, .row:after, .blog .post-wrap:after {
   content: "";
   display: table;
   clear: both; }
@@ -603,6 +615,10 @@ textarea {
     padding-left: 30px;
     padding-right: 30px; } }
 
+.row.inner {
+  padding: 0;
+  margin: 0; }
+
 .loader {
   height: 3px;
   background-color: #0278b5;
@@ -630,13 +646,13 @@ textarea {
   .branding .small {
     font-weight: 100;
     font-family: "Inconsolata", courier;
-    color: #5b616b; }
+    color: #737d8d; }
   @media only screen and (max-width: 500px) {
     .branding {
       margin-top: -14px; } }
 
 .intro h3 {
-  font-size: 3.2rem;
+  font-size: 5.4rem;
   margin: 10% 0 15%;
   -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
   -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
@@ -665,7 +681,7 @@ textarea {
     background: transparent;
     text-transform: capitalize;
     padding: 0 0 0 14px;
-    color: #5b616b;
+    color: #737d8d;
     display: block;
     font-size: 1.8rem;
     font-family: "Inconsolata", courier;
@@ -705,25 +721,30 @@ a.load-more, a.load-more:visited {
 .widget {
   margin-bottom: 50px; }
   .widget h4 {
-    margin-bottom: 25px;
     font-size: 2rem; }
   .widget hr {
-    margin-bottom: 30px; }
+    margin: 0 0 30px;
+    max-width: 30px; }
   .widget ul li {
     list-style: none;
-    line-height: 1.35;
-    margin-bottom: 15px; }
+    line-height: 1.3;
+    margin-bottom: 24px; }
     .widget ul li .date {
-      color: #5b616b;
-      display: inline; }
+      display: block;
+      margin-top: 3px; }
+    .widget ul li a, .widget ul li a:hover {
+      border: none;
+      color: inherit; }
+
+.date {
+  color: #737d8d;
+  font-size: 1.45rem; }
 
 .page.col {
   margin: 0; }
 
 .widgets-footer {
   margin-top: 2%; }
-  .widgets-footer hr {
-    margin: 5% 0; }
   @media only screen and (max-width: 768px) {
     .widgets-footer .widget.col {
       float: none;
@@ -733,8 +754,7 @@ a.load-more, a.load-more:visited {
 
 .container.bottom {
   background: #e8e9ee;
-  margin-top: 80px;
-  padding: 50px; }
+  margin-top: 80px; }
   @media only screen and (min-width: 1440px) {
     .container.bottom {
       padding: 80px; } }
@@ -743,6 +763,10 @@ footer .col {
   margin: 0; }
   footer .col.right {
     float: right; }
+  footer .col .email a, footer .col .email a:visited {
+    color: #737d8d; }
+    footer .col .email a:hover, footer .col .email a:active, footer .col .email a:visited:hover, footer .col .email a:visited:active {
+      color: inherit; }
 @media only screen and (max-width: 768px) {
   footer {
     text-align: center;
@@ -776,62 +800,95 @@ footer .col {
     background: #0293dd; }
 
 .main {
-  margin-top: 5%; }
+  margin-top: 3%; }
 
 .pagetitle h2 {
   font-size: 5.4rem;
-  margin-bottom: 3%; }
+  margin: 8% 0 1%; }
   @media only screen and (max-width: 768px) {
     .pagetitle h2 {
-      font-size: 3.2rem;
+      font-size: 3rem;
       text-align: center;
       margin: 12% 0 10%; } }
 
-article {
-  width: 66.66667%;
-  float: left; }
-  @media only screen and (max-width: 768px) {
-    article {
-      float: none;
-      margin: 30px 0;
-      width: auto; } }
-  article h1, article h2, article h3, article h4, article h5, article h6 {
-    margin-top: 3rem; }
-  article hr {
-    margin: 3rem auto; }
-  article dl, article ul, article ol {
-    clear: both; }
-  article ul, article ol {
-    margin: 0 0 1.5rem 1.5rem;
-    padding: 0; }
-  article ul {
-    list-style: disc; }
-  article ol {
-    list-style: decimal; }
-  article ol ol, article ul ul, article li {
-    margin-top: 1.2rem; }
-  article dl dt {
-    font-weight: bold; }
-  article dl dd {
-    margin: 0 1.5rem 1.5rem 1.5rem;
-    line-height: 1.4; }
-  article p img {
-    vertical-align: middle; }
+@media only screen and (max-width: 768px) {
+  .blog {
+    float: none;
+    margin: 30px 0;
+    width: auto; } }
+.blog h1, .blog h2, .blog h3, .blog h4, .blog h5, .blog h6 {
+  margin-top: 3rem; }
+.blog hr {
+  margin: 3rem auto; }
+.blog dl, .blog ul, .blog ol {
+  clear: both; }
+.blog ul, .blog ol {
+  margin: 0 0 1.5rem 1.5rem;
+  padding: 0; }
+.blog ul {
+  list-style: disc; }
+.blog ol {
+  list-style: decimal; }
+.blog ol ol, .blog ul ul, .blog li {
+  margin-top: 1.2rem; }
+.blog dl dt {
+  font-weight: bold; }
+.blog dl dd {
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  line-height: 1.4; }
+.blog p img {
+  vertical-align: middle; }
 
-.sidebar {
-  width: 33.33333%;
-  float: right;
-  min-height: 1em;
-  padding: 0 4%; }
-  .sidebar .widget {
-    /*background-color: $bg-med;
-    padding:$screen-padding-sm;
-    border-top:3px solid #b3b4b9;
-    */ }
-  @media only screen and (max-width: 768px) {
-    .sidebar {
-      float: none;
-      margin: 30px 0;
-      width: auto; } }
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    float: none;
+    margin: 30px 0;
+    width: auto; } }
+
+.blog .post-wrap {
+  margin-bottom: 70px; }
+.blog a.post, .blog a.post:visited {
+  display: block;
+  border: none;
+  color: inherit; }
+  .blog a.post:hover h3, .blog a.post:visited:hover h3 {
+    border-bottom: 1px solid #bfc1cc; }
+.blog .img-blog {
+  background: #000; }
+  .blog .img-blog img {
+    display: block;
+    opacity: .9; }
+  .blog .img-blog:hover img {
+    opacity: 1; }
+.blog.archives h3 {
+  font-size: 3rem;
+  border-bottom: 1px solid transparent;
+  display: inline-block; }
+  .blog.archives h3 a {
+    border: none;
+    display: inline-block;
+    color: inherit; }
+.blog.archives p {
+  color: #737d8d; }
+.blog.archives .post:hover p {
+  color: inherit; }
+.blog.archives .date {
+  margin-top: 5px; }
+.blog.archives .cat {
+  margin-top: 3px; }
+.blog.archives .excerpt .read-more {
+  font-size: 1.45rem;
+  font-weight: 900;
+  margin-top: -10px; }
+.blog.archives .excerpt a, .blog.archives .excerpt a:visited {
+  display: block;
+  color: inherit; }
+  .blog.archives .excerpt a h3, .blog.archives .excerpt a:visited h3 {
+    border-bottom: 3px solid transparent;
+    box-shadow: none;
+    margin: 0 0 10px; }
+  .blog.archives .excerpt a:hover h3, .blog.archives .excerpt a:visited:hover h3 {
+    border-bottom: 3px solid #58c6ff;
+    box-shadow: inset 0 -5px 0 #58c6ff; }
 
 /*# sourceMappingURL=style.css.map */

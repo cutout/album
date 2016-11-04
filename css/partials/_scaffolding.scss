@@ -54,14 +54,20 @@ body, input, textarea, select, button {
 a, a:visited {
     color: $link-color;
     text-decoration: none;
-    border-bottom: 1px solid $border-dark;
+    @include fat-border;
     &:hover, &:active {
-        color:$link-color-hover
+        color:$link-color-hover;
+        @include fat-border-hover;
     }
 }
 
-a:hover, :focus, li:hover, img:hover, input:hover,button:hover,.btn:hover {
-    @include transition(all 0.3s linear);
+a.no-border {
+  border:none;
+  box-shadow: none;
+}
+
+a, li, img, input,button,.btn,p,h3 {
+    @include transition(all 0.2s ease-in-out);
 }
 
 p {

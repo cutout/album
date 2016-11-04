@@ -51,6 +51,11 @@
   }
 }
 
+.row.inner {
+  padding: 0;
+  margin:0;
+}
+
 .loader {
   height: 3px;
   background-color: $link-color;
@@ -82,7 +87,7 @@
 
 .intro {
   h3 {
-    font-size: $font-head-tablet;
+    font-size: $font-giant;
     margin:10% 0 15%;
     @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
     width:75%;
@@ -158,23 +163,32 @@ a.load-more,a.load-more:visited {
 .widget {
   margin-bottom:50px;
   h4 {
-    margin-bottom: 25px;
     font-size: $font-bigger
   }
   hr {
-    margin-bottom: 30px;
+    margin: 0 0 30px;
+    max-width: 30px;
   }
   ul {
     li {
       list-style: none;
-      line-height: 1.35;
-      margin-bottom: 15px;
+      line-height: 1.3;
+      margin-bottom: 24px;
       .date {
-        color: $text-color-lt;
-        display: inline;
+        display: block;
+        margin-top: 3px;
+      }
+      a,a:hover {
+        border:none;
+        color: inherit;
       }
     }
   }
+}
+
+.date {
+  color: $text-color-lt;
+  font-size: $font-smaller
 }
 
 .page.col {
@@ -183,9 +197,6 @@ a.load-more,a.load-more:visited {
 
 .widgets-footer {
   margin-top: 2%;
-  hr {
-    margin:5% 0;
-  }
   .widget.col {
     @include screen-sm {
       float:none;
@@ -199,7 +210,6 @@ a.load-more,a.load-more:visited {
 .container.bottom {
   background: $bg-med;
   margin-top: 80px;
-  padding:$screen-padding-sm;
   @include screen-large {
     padding:$screen-padding-large
   }
@@ -210,6 +220,14 @@ footer {
     margin:0;
     &.right {
       float:right;
+    }
+    .email {
+      a,a:visited {
+        color: $text-color-lt;
+        &:hover,&:active {
+          color: inherit;
+        }
+      }
     }
   }
   @include screen-sm {
@@ -256,13 +274,13 @@ footer {
 }
 
 .main {
-  margin-top:5%;
+  margin-top:3%;
 }
 
 .pagetitle {
   h2 {
     font-size: $font-giant;
-    margin-bottom: 3%;
+    margin: 8% 0 1%;
     @include screen-sm {
       font-size: $font-head-tablet;
       text-align: center;
@@ -271,9 +289,7 @@ footer {
   }
 }
 
-article {
-  width:66.66667%;
-  float:left;
+.blog {
   @include screen-sm {
     @include stack;
   }
@@ -316,17 +332,74 @@ article {
 }
 
 .sidebar {
-  width:33.33333%;
-  float:right;
-  min-height: 1em;
-  padding:0 4%;
-  .widget {
-    /*background-color: $bg-med;
-    padding:$screen-padding-sm;
-    border-top:3px solid #b3b4b9;
-    */
-  }
   @include screen-sm {
     @include stack;
+  }
+}
+
+.blog {
+  .post-wrap {
+    margin-bottom: 70px;
+    @extend .clearfix;
+  }
+  a.post,a.post:visited {
+    display: block;
+    border:none;
+    color: inherit;
+    @extend .no-border;
+    &:hover h3 {
+      border-bottom: 1px solid $border-dark
+    }
+  }
+  .img-blog {
+    background: #000;
+    img {
+      display: block;
+      opacity: .9;
+    }
+    &:hover img {
+      opacity: 1;
+    }
+  }
+  &.archives {
+    h3 {
+      font-size: $font-head-tablet;
+      border-bottom: 1px solid transparent;
+      display: inline-block;
+      a {
+        border: none;
+        display: inline-block;
+        color: inherit;
+      }
+    }
+    p {
+      color: $text-color-lt
+    }
+    .post:hover p {
+      color: inherit;
+    }
+    .date {
+      margin-top: 5px;
+    }
+    .cat {
+      margin-top:3px;
+    }
+    .excerpt .read-more {
+      font-size: $font-smaller;
+      font-weight: 900;
+      margin-top: -10px;
+    }
+    .excerpt a, .excerpt a:visited {
+      display: block;
+      color: inherit;
+      @extend .no-border;
+      h3 {
+        @include fat-border;
+        margin:0 0 10px;
+      }
+      &:hover h3 {
+        @include fat-border-hover;
+      }
+    }
   }
 }
