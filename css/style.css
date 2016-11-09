@@ -653,7 +653,7 @@ textarea {
 
 .intro h3 {
   font-size: 5.4rem;
-  margin: 10% 0 15%;
+  margin: 10% 0 14%;
   -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
   -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
   -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
@@ -907,5 +907,10 @@ a.post, a.post:visited {
   text-overflow: ellipsis;
   width: 90%;
   margin: 10px 0 0 0; }
+
+.page-banner {
+  height: 500px;
+  background-size: cover;
+  background: url(../img/img-blog.jpeg) no-repeat center center fixed; }
 
 /*# sourceMappingURL=style.css.map */

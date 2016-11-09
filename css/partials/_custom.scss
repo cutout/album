@@ -88,7 +88,7 @@
 .intro {
   h3 {
     font-size: $font-giant;
-    margin:10% 0 15%;
+    margin:10% 0 14%;
     @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
     width:75%;
     @include screen-laptop {
@@ -429,4 +429,10 @@ a.post,a.post:visited {
       }
     }
   }
+}
+
+.page-banner {
+  height:500px;
+  background-size: cover;
+  background: url(../img/img-blog.jpeg) no-repeat center center fixed;
 }
