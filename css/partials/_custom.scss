@@ -154,6 +154,7 @@ a.load-more,a.load-more:visited {
   color: inherit;
   padding:16px;
   display: block;
+  @extend .no-border;
   &:hover,&:active {
     background: $border-dark;
     color: inherit;
@@ -191,9 +192,6 @@ a.load-more,a.load-more:visited {
   font-size: $font-smaller
 }
 
-.page.col {
-  margin:0;
-}
 
 .widgets-footer {
   margin-top: 2%;
@@ -273,14 +271,14 @@ footer {
   }
 }
 
-.main {
-  margin-top:3%;
-}
-
 .pagetitle {
+  margin: 8% 0 1%;
+  .type {
+    margin-bottom: 3px;
+    color: $text-color-lt;
+  }
   h2 {
     font-size: $font-giant;
-    margin: 8% 0 1%;
     @include screen-sm {
       font-size: $font-head-tablet;
       text-align: center;
@@ -289,7 +287,7 @@ footer {
   }
 }
 
-.blog {
+article {
   @include screen-sm {
     @include stack;
   }
@@ -337,68 +335,97 @@ footer {
   }
 }
 
-.blog {
-  .post-wrap {
-    margin-bottom: 70px;
-    @extend .clearfix;
+
+.post-wrap {
+  margin-bottom: 70px;
+  @extend .clearfix;
+  h3 {
+    font-size: $font-head-tablet;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    a {
+      border: none;
+      display: inline-block;
+      color: inherit;
+    }
   }
-  a.post,a.post:visited {
+  p {
+    color: $text-color-lt
+  }
+  .post:hover p {
+    color: inherit;
+  }
+  .date {
+    margin-top: 5px;
+  }
+  .cat {
+    margin-top:3px;
+  }
+  .excerpt.col {
+    float: right;
+  }
+  .excerpt .read-more {
+    font-size: $font-smaller;
+    font-weight: 900;
+    margin-top: -10px;
+  }
+  .excerpt a, .excerpt a:visited {
     display: block;
-    border:none;
     color: inherit;
     @extend .no-border;
+    h3 {
+      @include fat-border;
+      margin:0 0 10px;
+    }
     &:hover h3 {
-      border-bottom: 1px solid $border-dark
+      @include fat-border-hover;
     }
   }
-  .img-blog {
-    background: #000;
-    img {
-      display: block;
-      opacity: .9;
-    }
-    &:hover img {
+  &:hover {
+    .img-blog img {
       opacity: 1;
     }
   }
-  &.archives {
-    h3 {
-      font-size: $font-head-tablet;
-      border-bottom: 1px solid transparent;
-      display: inline-block;
-      a {
-        border: none;
-        display: inline-block;
-        color: inherit;
-      }
+}
+a.post,a.post:visited {
+  display: block;
+  border:none;
+  color: inherit;
+  @extend .no-border;
+  &:hover h3 {
+    border-bottom: 1px solid $border-dark
+  }
+}
+.img-blog {
+  background: #000;
+  img {
+    display: block;
+    opacity: .9;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+
+.archive {
+  .post-wrap {
+    .col.meta,.col.excerpt {
+      float: none;
+      width:auto;
+      margin:0;
     }
-    p {
-      color: $text-color-lt
-    }
-    .post:hover p {
-      color: inherit;
-    }
-    .date {
-      margin-top: 5px;
-    }
-    .cat {
-      margin-top:3px;
-    }
-    .excerpt .read-more {
-      font-size: $font-smaller;
-      font-weight: 900;
-      margin-top: -10px;
-    }
-    .excerpt a, .excerpt a:visited {
-      display: block;
-      color: inherit;
-      @extend .no-border;
+    &:nth-of-type(3n) {
+      margin-right:0;
+}
+  }
+  .post-wrap {
+    .excerpt {
       h3 {
-        @include fat-border;
-        margin:0 0 10px;
-      }
-      &:hover h3 {
-        @include fat-border-hover;
+        font-size: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width:90%;
+        margin:10px 0 0 0;
       }
     }
   }
