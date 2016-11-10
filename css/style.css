@@ -820,6 +820,9 @@ footer {
         text-align: center;
         margin: 12% 0 10%; } }
 
+.entry {
+  margin-top: 8px; }
+
 .single .pagetitle {
   text-align: center; }
   .single .pagetitle h2 {
@@ -839,8 +842,9 @@ footer {
     font-family: "Roboto", "Helvetica Neue", sans-serif; }
   .meta .cat {
     font-weight: 700; }
-  .meta h3 {
-    margin: 0; }
+  .meta h4 {
+    margin: 0 0 20px;
+    font-size: 1.8rem; }
   .meta .tags {
     margin-top: 30px; }
     .meta .tags .tag {
@@ -853,11 +857,19 @@ footer {
   .meta hr {
     width: 40px;
     margin: 80px 0 20px 0; }
-  .meta .title {
+  .meta .post-wrap h3.title {
     line-height: 1.25;
-    margin-bottom: 5px; }
-    .meta .title a {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    display: inline; }
+    .meta .post-wrap h3.title a {
       color: inherit; }
+  .meta .post-wrap .img-blog img {
+    margin: 0 0 10px;
+    display: block; }
+  .meta .col {
+    margin-top: 0;
+    margin-bottom: 0; }
 
 @media only screen and (max-width: 768px) {
   article {
@@ -898,7 +910,7 @@ article p img {
   .post-wrap h3 {
     font-size: 3rem;
     border-bottom: 1px solid transparent;
-    display: inline-block; }
+    display: inline; }
     .post-wrap h3 a {
       border: none;
       display: inline-block;
