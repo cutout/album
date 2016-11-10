@@ -38,9 +38,16 @@ body {
 
 body,html {
   direction:ltr;
+  height:100%;
 }
 
 .wrapper {
+  min-height: 100%;
+  margin-bottom: -210px;
+  &:after {
+    content: "";
+    display: block;
+  }
   @include screen-laptop {
       min-width:0;
       max-width:$content-width;

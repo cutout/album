@@ -195,6 +195,9 @@ a.load-more,a.load-more:visited {
 
 .widgets-footer {
   margin-top: 2%;
+  hr.divider {
+    margin: 50px 0;
+  }
   .widget.col {
     @include screen-sm {
       float:none;
@@ -214,6 +217,7 @@ a.load-more,a.load-more:visited {
 }
 
 footer {
+  height:210px;
   .col {
     margin:0;
     &.right {
@@ -286,6 +290,63 @@ footer {
     }
   }
 }
+
+.single {
+  .pagetitle {
+    text-align: center;
+    h2 {
+      font-size: $font-head-tablet;
+      margin: 0 0 7px 0;
+    }
+  }
+  article {
+    font-size: 2rem;
+  }
+  .row.single-wrap {
+    max-width: 900px;
+  }
+  .img-blog img {
+    margin:30px auto 40px;
+    display: block;
+  }
+}
+.meta {
+  margin:40px 0;
+  .cats {
+    font-family: $font-family-display
+  }
+  .cat {
+    font-weight: 700;
+  }
+  h3 {
+    margin:0
+  }
+  .tags {
+    margin-top:30px;
+    .tag {
+      background: $bg-dark;
+      color: #fff;
+      padding: 7px 10px;
+      font-size: $font-smaller;
+      @extend .no-border;
+      &:hover,&:active {
+        background: $link-color-hover;
+      }
+    }
+  }
+  hr {
+    width:40px;
+    margin:80px 0 20px 0;
+  }
+  .title {
+    line-height: 1.25;
+    margin-bottom: 5px;
+    a {
+      color: inherit;
+    }
+  }
+}
+
 
 article {
   @include screen-sm {
@@ -432,7 +493,37 @@ a.post,a.post:visited {
 }
 
 .page-banner {
+  margin-top:25px;
   height:500px;
   background-size: cover;
   background: url(../img/img-blog.jpeg) no-repeat center center fixed;
+}
+
+.error-msg {
+  margin-top: 25px;
+}
+
+.search-form {
+  width:350px;
+  overflow: hidden;
+  button {
+    float:right;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .search-field {
+    border: none;
+    width:70%;
+    height:70px;
+    font-size: $font-smaller;
+    padding-left:14px;
+    outline: none;
+  }
+  .search-field, button {
+    height:48px
+  }
+}
+
+.screen-reader-text {
+  display: none;
 }
