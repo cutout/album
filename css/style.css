@@ -247,7 +247,7 @@ a.no-border, a.load-more, a.load-more:visited, .meta .tags a.tag, .post-wrap .ex
   border: none;
   box-shadow: none; }
 
-a, li, img, input, button, .btn, p, h3 {
+a, li, img, input, button, .btn, p, h3, .fa {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -309,7 +309,7 @@ h6 {
   font-size: .8rem; }
 
 blockquote {
-  margin: 25px 45px;
+  margin: 30px 55px;
   border-left: 3px solid #bfc1cc;
   padding-left: 25px;
   color: #737d8d; }
@@ -378,6 +378,11 @@ table {
     display: block; }
     .row .col:last-child, .row .col.twelvecol {
       margin-right: 0; }
+    @media only screen and (max-width: 500px) {
+      .row .col {
+        float: none;
+        margin: 30px 0;
+        width: auto; } }
 
 .twelvecol {
   width: 100%; }
@@ -659,8 +664,8 @@ textarea {
       margin-top: -14px; } }
 
 .intro h3 {
-  font-size: 5.4rem;
-  margin: 10% 0 14%;
+  font-size: 5.6rem;
+  margin: 13% 0 16%;
   -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
   -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
   -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
@@ -727,28 +732,32 @@ a.load-more, a.load-more:visited {
 
 .widget {
   margin-bottom: 50px; }
+  .widget a {
+    font-weight: 600; }
   .widget h4 {
     font-size: 2rem; }
-  .widget hr {
-    margin: 0 0 30px;
-    max-width: 30px; }
   .widget ul li {
     list-style: none;
-    line-height: 1.3;
-    margin-bottom: 24px; }
+    line-height: 1.25;
+    margin-bottom: 27px; }
     .widget ul li .date {
       display: block;
-      margin-top: 3px; }
+      margin-top: 6px; }
     .widget ul li a, .widget ul li a:hover {
       border: none;
       color: inherit; }
+
+.widget hr, .pagetitle hr {
+  max-width: 30px;
+  margin: 0 0 30px;
+  max-width: 30px; }
 
 .date {
   color: #737d8d;
   font-size: 1.45rem; }
 
 .widgets-footer {
-  margin-top: 2%; }
+  margin: 50px 0 200px; }
   .widgets-footer hr.divider {
     margin: 50px 0; }
   @media only screen and (max-width: 768px) {
@@ -760,10 +769,13 @@ a.load-more, a.load-more:visited {
 
 .container.bottom {
   background: #e8e9ee;
-  margin-top: 80px; }
+  margin-top: 210px; }
   @media only screen and (min-width: 1440px) {
     .container.bottom {
       padding: 80px; } }
+  @media only screen and (max-width: 768px) {
+    .container.bottom {
+      margin-top: 20px; } }
 
 footer {
   height: 210px; }
@@ -792,7 +804,7 @@ footer {
       footer .divider {
         display: none; } }
 
-.more a, .more a:visited {
+.more i {
   color: inherit;
   font-size: 1.8rem;
   border: none;
@@ -804,16 +816,24 @@ footer {
   height: 30px;
   text-align: center;
   line-height: 30px; }
-  .more a:hover, .more a:active, .more a:visited:hover, .more a:visited:active {
+  .more i:hover, .more i:active {
     background: #0293dd; }
 
 .pagetitle {
   margin: 8% 0 1%; }
+  @media only screen and (max-width: 768px) {
+    .pagetitle {
+      margin-top: 20%; } }
   .pagetitle .type {
     margin-bottom: 3px;
-    color: #737d8d; }
+    color: #737d8d;
+    font-size: 1.45rem; }
+    @media only screen and (max-width: 768px) {
+      .pagetitle .type {
+        text-align: center;
+        margin-bottom: -35px; } }
   .pagetitle h2 {
-    font-size: 5.4rem; }
+    font-size: 5.6rem; }
     @media only screen and (max-width: 768px) {
       .pagetitle h2 {
         font-size: 3rem;
@@ -826,14 +846,14 @@ footer {
 .single .pagetitle {
   text-align: center; }
   .single .pagetitle h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0 0 7px 0; }
 .single article {
   font-size: 2rem; }
 .single .row.single-wrap {
   max-width: 900px; }
 .single .img-blog img {
-  margin: 30px auto 40px;
+  margin: 35px auto 45px;
   display: block; }
 
 .meta {
@@ -851,7 +871,9 @@ footer {
       background: #43444b;
       color: #fff;
       padding: 7px 10px;
-      font-size: 1.45rem; }
+      font-size: 1.45rem;
+      display: inline-block;
+      margin-bottom: 6px; }
       .meta .tags .tag:hover, .meta .tags .tag:active {
         background: #0293dd; }
   .meta hr {
@@ -911,6 +933,9 @@ article p img {
     font-size: 3rem;
     border-bottom: 1px solid transparent;
     display: inline; }
+    @media only screen and (max-width: 768px) {
+      .post-wrap h3 {
+        font-size: 2rem; } }
     .post-wrap h3 a {
       border: none;
       display: inline-block;
@@ -956,6 +981,9 @@ a.post, a.post:visited {
     opacity: .9;
     -webkit-backface-visibility: hidden; }
 
+.blog article, .archive article {
+  margin: 0; }
+
 .archive .post-wrap .col.meta, .archive .post-wrap .col.excerpt {
   float: none;
   width: auto;
@@ -964,17 +992,37 @@ a.post, a.post:visited {
   margin-right: 0; }
 .archive .post-wrap .excerpt h3 {
   font-size: 2rem;
+  display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 90%;
   margin: 10px 0 0 0; }
+  @media only screen and (max-width: 768px) {
+    .archive .post-wrap .excerpt h3 {
+      overflow: visible;
+      text-overflow: inherit;
+      white-space: normal; } }
 
 .page-banner {
-  margin-top: 25px;
-  height: 500px;
-  background-size: cover;
-  background: url(../img/img-blog.jpeg) no-repeat center center fixed; }
+  margin-top: 35px;
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1b1d;
+  margin-bottom: 50px; }
+  .page-banner .img-blog {
+    background: url(../img/img-blog.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 500px;
+    opacity: .4; }
+    @media only screen and (max-width: 768px) {
+      .page-banner .img-blog {
+        height: 280px;
+        background-attachment: inherit; } }
+  .page-banner .pagetitle {
+    position: absolute;
+    bottom: 10%;
+    color: #fff; }
 
 .error-msg {
   margin-top: 25px; }
@@ -998,5 +1046,47 @@ a.post, a.post:visited {
 
 .screen-reader-text {
   display: none; }
+
+.alignright {
+  float: right;
+  margin: 1.5rem -15% 1.5rem 3.2rem; }
+  @media only screen and (max-width: 1000px) {
+    .alignright {
+      margin-right: 0; } }
+
+.related article {
+  margin: 0; }
+.related .date {
+  margin-bottom: 24px; }
+
+.alignleft {
+  float: left;
+  margin: 1.5rem 3.2rem 1.5rem -15%; }
+  @media only screen and (max-width: 1000px) {
+    .alignleft {
+      margin-left: 0; } }
+
+.alignright, .alignleft {
+  max-width: 50%; }
+  @media only screen and (max-width: 768px) {
+    .alignright, .alignleft {
+      float: none;
+      margin: 30px 0;
+      width: auto;
+      max-width: 100%; } }
+
+.alignnone {
+  display: block;
+  width: 100%;
+  margin: 30px auto; }
+
+.wp-caption {
+  text-align: center; }
+  .wp-caption img {
+    display: block;
+    margin-bottom: 12px; }
+  .wp-caption .wp-caption-text {
+    font-size: 1.45rem;
+    color: #737d8d; }
 
 /*# sourceMappingURL=style.css.map */

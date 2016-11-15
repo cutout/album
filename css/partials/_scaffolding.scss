@@ -73,7 +73,7 @@ a.no-border {
   box-shadow: none;
 }
 
-a, li, img, input,button,.btn,p,h3 {
+a, li, img, input,button,.btn,p,h3,.fa {
     @include transition(all 0.2s ease-in-out);
 }
 
@@ -146,7 +146,7 @@ h6 {
 }
 
 blockquote {
-    margin:25px 45px;
+    margin:30px 55px;
     border-left: 3px solid $border-dark;
     padding-left: 25px;
     color:$text-color-lt
@@ -230,6 +230,9 @@ table {
       display: block;
       &:last-child,&.twelvecol {
           margin-right:0;
+      }
+      @include screen-xs {
+        @include stack;
       }
     }
   }

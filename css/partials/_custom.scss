@@ -88,7 +88,7 @@
 .intro {
   h3 {
     font-size: $font-giant;
-    margin:10% 0 14%;
+    margin:13% 0 16%;
     @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
     width:75%;
     @include screen-laptop {
@@ -163,21 +163,20 @@ a.load-more,a.load-more:visited {
 
 .widget {
   margin-bottom:50px;
+  a {
+    font-weight: 600;
+  }
   h4 {
     font-size: $font-bigger
-  }
-  hr {
-    margin: 0 0 30px;
-    max-width: 30px;
   }
   ul {
     li {
       list-style: none;
-      line-height: 1.3;
-      margin-bottom: 24px;
+      line-height: 1.25;
+      margin-bottom: 27px;
       .date {
         display: block;
-        margin-top: 3px;
+        margin-top: 6px;
       }
       a,a:hover {
         border:none;
@@ -187,6 +186,12 @@ a.load-more,a.load-more:visited {
   }
 }
 
+.widget hr, .pagetitle hr {
+  max-width: 30px;
+  margin: 0 0 30px;
+  max-width: 30px;
+}
+
 .date {
   color: $text-color-lt;
   font-size: $font-smaller
@@ -194,7 +199,7 @@ a.load-more,a.load-more:visited {
 
 
 .widgets-footer {
-  margin-top: 2%;
+  margin: 50px 0 200px;
   hr.divider {
     margin: 50px 0;
   }
@@ -210,9 +215,12 @@ a.load-more,a.load-more:visited {
 
 .container.bottom {
   background: $bg-med;
-  margin-top: 80px;
+  margin-top: 210px;
   @include screen-large {
     padding:$screen-padding-large
+  }
+  @include screen-sm {
+    margin-top:20px;
   }
 }
 
@@ -257,7 +265,7 @@ footer {
 }
 
 .more {
-  a,a:visited {
+  i {
     color: inherit;
     font-size: 1.8rem;
     border:none;
@@ -277,9 +285,17 @@ footer {
 
 .pagetitle {
   margin: 8% 0 1%;
+  @include screen-sm {
+    margin-top:20%;
+  }
   .type {
     margin-bottom: 3px;
     color: $text-color-lt;
+    font-size: $font-smaller;
+    @include screen-sm {
+      text-align: center;
+      margin-bottom: -35px;
+    }
   }
   h2 {
     font-size: $font-giant;
@@ -299,7 +315,7 @@ footer {
   .pagetitle {
     text-align: center;
     h2 {
-      font-size: $font-head-tablet;
+      font-size: $font-large;
       margin: 0 0 7px 0;
     }
   }
@@ -310,7 +326,7 @@ footer {
     max-width: 900px;
   }
   .img-blog img {
-    margin:30px auto 40px;
+    margin:35px auto 45px;
     display: block;
   }
 }
@@ -333,6 +349,8 @@ footer {
       color: #fff;
       padding: 7px 10px;
       font-size: $font-smaller;
+      display: inline-block;
+      margin-bottom: 6px;
       @extend .no-border;
       &:hover,&:active {
         background: $link-color-hover;
@@ -421,6 +439,9 @@ article {
     font-size: $font-head-tablet;
     border-bottom: 1px solid transparent;
     display: inline;
+    @include screen-sm {
+      font-size: $font-bigger;
+    }
     a {
       border: none;
       display: inline-block;
@@ -483,6 +504,11 @@ a.post,a.post:visited {
   }
 }
 
+.blog,.archive {
+  article {
+    margin:0;
+  }
+}
 
 .archive {
   .post-wrap {
@@ -493,27 +519,49 @@ a.post,a.post:visited {
     }
     &:nth-of-type(3n) {
       margin-right:0;
-}
+    }
   }
   .post-wrap {
     .excerpt {
       h3 {
         font-size: 2rem;
+        display: block;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         width:90%;
         margin:10px 0 0 0;
+        @include screen-sm {
+          overflow: visible;
+          text-overflow: inherit;
+          white-space: normal;
+        }
       }
     }
   }
 }
 
 .page-banner {
-  margin-top:25px;
-  height:500px;
-  background-size: cover;
-  background: url(../img/img-blog.jpeg) no-repeat center center fixed;
+  margin-top:35px;
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1b1d;
+  margin-bottom: 50px;
+  .img-blog {
+    background: url(../img/img-blog.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height:500px;
+    opacity: .4;
+    @include screen-sm {
+      height:280px;
+      background-attachment: inherit;
+    }
+  }
+  .pagetitle {
+    position: absolute;
+    bottom:10%;
+    color:#fff;
+  }
 }
 
 .error-msg {
@@ -543,4 +591,55 @@ a.post,a.post:visited {
 
 .screen-reader-text {
   display: none;
+}
+
+.alignright {
+  float: right;
+  margin:1.5rem -15% 1.5rem 3.2rem;
+  @include screen-med {
+    margin-right: 0;
+  }
+}
+
+.related {
+  article {
+    margin: 0;
+  }
+  .date {
+    margin-bottom: 24px;
+  }
+}
+
+.alignleft {
+  float: left;
+  margin:1.5rem 3.2rem 1.5rem -15%;
+  @include screen-med {
+    margin-left: 0;
+  }
+}
+
+.alignright,.alignleft {
+  max-width: 50%;
+  @include screen-sm {
+    @include stack;
+    max-width: 100%;
+  }
+}
+
+.alignnone {
+  display: block;
+  width:100%;
+  margin:30px auto;
+}
+
+.wp-caption {
+  text-align: center;
+  img {
+    display: block;
+    margin-bottom: 12px;
+  }
+  .wp-caption-text {
+    font-size: $font-smaller;
+    color:$text-color-lt
+  }
 }
