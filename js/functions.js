@@ -24,7 +24,7 @@ transformicons.add('.tcon');
 
 // Fade on scroll
 $(window).on('scroll',function(){
-  $(".page-banner .img-blog").css("opacity", 1 - $(window).scrollTop() / 550);
+  $(".page-banner .img-blog").css("opacity", .4 - $(window).scrollTop() / 1300);
 });
 
 

@@ -48,7 +48,11 @@
             <li><a href="archive.html">Archive</a></li>
 						<li><a href="single.html">Single</a></li>
 						<li><a href="404.html">Error</a></li>
-						<li class="search"><img src="img/magnify.svg" /></li>
+						<li class="search">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="search-icon">
+							  <path fill-rule="evenodd" d="M8.72540529,11.3467256 C7.90760672,11.7644185 6.98131488,12 6,12 C2.68629134,12 0,9.31370866 0,6 C0,2.68629134 2.68629134,0 6,0 C9.31370866,0 12,2.68629134 12,6 C12,7.24246438 11.6223475,8.39672324 10.9755697,9.35424938 L15.1819805,13.5606602 C15.1819805,13.5606602 15.8890873,14.267767 15.1819805,14.9748737 L14.4748737,15.6819805 C13.767767,16.3890873 13.0606602,15.6819805 13.0606602,15.6819805 L8.72540529,11.3467256 L8.72540529,11.3467256 Z M2,6 C2,3.79086084 3.79086084,2 6,2 C8.20913916,2 10,3.79086084 10,6 C10,8.20913916 8.20913916,10 6,10 C3.79086084,10 2,8.20913916 2,6 L2,6 Z"/>
+							</svg>
+						</li>
         </ul>
         <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
             <span class="tcon-menu__lines" aria-hidden="true"></span>
@@ -56,7 +60,7 @@
         </button>
     	</nav>
 		</header>
-		<div class="row">
+		<div class="row single-wrap">
 			<header class="pagetitle">
 			<h2>Proin cursus sem sit amet urna</h2>
 				<span class="date">
@@ -70,7 +74,7 @@
 		</div>
 		<div class="main" role="main">
 			<div class="row single-wrap">
-				<div class="img-blog">
+				<div class="img-featured">
 						<img src="img/img-blog.jpg" />
 				</div>
 						<article>
@@ -117,78 +121,82 @@
 							</div>
 						</article>
 						<div class="meta">
-							<div class="cats">
-								<span class="cat">Posted in</span> <a href="#">Sports</a>
-							</div>
-							<div class="tags">
+							<span class="cats">
+								<span class="cat-title">Posted in</span> <a href="#">Sports</a>
+							</span>
+							<span class="tags">
+								<span class="tag-title">Tagged as</span>
 								<a href="#" class="tag">soccer</a> <a href="#" class="tag">gerrard</a> <a href="#" class="tag">liverpool</a> <a href="#" class="tag">adidas</a>
-							</div>
+								</span>
+						</div>
+						<div class="related">
 							<hr />
-							<h4>Related</h4>
-							<div class="row inner related">
-								<div class="post-wrap col fourcol">
-									<div class="post">
-										<div class="img-blog">
-											<a href="#">
-												<img src="img/img-blog.jpg">
-											</a>
-										</div>
-										<div class="excerpt">
-											<a href="#">
-												<article>
-													<h3 class="title">
-														Mattis in arcu non euismod orci
-													</h3>
-												</article>
-											</a>
-										</div><!--/excerpt-->
-												<div class="date">
-													Oct 10, 2016
-												</div>
-									</div><!--/post-->
-								</div><!--/post-wrap-->
-								<div class="post-wrap col fourcol">
-									<div class="post">
-										<div class="img-blog">
-											<a href="#">
-												<img src="img/img-blog.jpg">
-											</a>
-										</div>
-										<div class="excerpt">
-											<a href="#">
-												<article>
-													<h3 class="title">
-														Mattis in arcu non euismod orci
-													</h3>
-												</article>
-											</a>
-										</div><!--/excerpt-->
-												<div class="date">
-													Oct 10, 2016
-												</div>
-									</div><!--/post-->
-								</div><!--/post-wrap-->
-								<div class="post-wrap col fourcol">
-									<div class="post">
-										<div class="img-blog">
-											<a href="#">
-												<img src="img/img-blog.jpg">
-											</a>
-										</div>
-										<div class="excerpt">
-											<a href="#">
-												<article>
-													<h3 class="title">
-														Mattis in arcu non euismod orci
-													</h3>
-												</article>
-											</a>
-										</div><!--/excerpt-->
-												<div class="date">
-													Oct 10, 2016
-												</div>
-									</div><!--/post-->
-								</div><!--/post-wrap-->
+								<h3>Related</h3>
+								<div class="row inner">
+									<div class="post-wrap col fourcol">
+										<div class="post">
+											<div class="img-blog">
+												<a href="#">
+													<img src="img/img-blog.jpg">
+												</a>
+											</div>
+											<div class="excerpt">
+												<a href="#">
+													<article>
+														<h4 class="title">
+															Mattis in arcu non euismod orci
+														</h4>
+													</article>
+												</a>
+											</div><!--/excerpt-->
+													<div class="date">
+														Oct 10, 2016
+													</div>
+										</div><!--/post-->
+									</div><!--/post-wrap-->
+									<div class="post-wrap col fourcol">
+										<div class="post">
+											<div class="img-blog">
+												<a href="#">
+													<img src="img/img-blog.jpg">
+												</a>
+											</div>
+											<div class="excerpt">
+												<a href="#">
+													<article>
+														<h4 class="title">
+															Mattis in arcu non euismod orci
+														</h4>
+													</article>
+												</a>
+											</div><!--/excerpt-->
+													<div class="date">
+														Oct 10, 2016
+													</div>
+										</div><!--/post-->
+									</div><!--/post-wrap-->
+									<div class="post-wrap col fourcol">
+										<div class="post">
+											<div class="img-blog">
+												<a href="#">
+													<img src="img/img-blog.jpg">
+												</a>
+											</div>
+											<div class="excerpt">
+												<a href="#">
+													<article>
+														<h4 class="title">
+															Mattis in arcu non euismod orci
+														</h4>
+													</article>
+												</a>
+											</div><!--/excerpt-->
+													<div class="date">
+														Oct 10, 2016
+													</div>
+										</div><!--/post-->
+									</div><!--/post-wrap-->
+								</div>
 							</div><!--/inner row-->
 						</div><!--/meta-->
 			</div><!--/row-->

@@ -236,7 +236,7 @@ table {
       &:last-child,&.twelvecol {
           margin-right:0;
       }
-      @include screen-xs {
+      @include screen-sm {
         @include stack;
       }
     }

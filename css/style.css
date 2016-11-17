@@ -146,6 +146,9 @@
       cursor: pointer; }
       .menu.col li.search img:hover {
         opacity: 1; }
+    @media only screen and (max-width: 768px) {
+      .menu.col li.search {
+        margin-top: 20px; } }
     .menu.col li a, .menu.col li a:visited {
       text-decoration: none;
       color: inherit;
@@ -243,7 +246,7 @@ a, a:visited {
     border-bottom: 3px solid #58c6ff;
     box-shadow: inset 0 -5px 0 #58c6ff; }
 
-a.no-border, .branding h1 a:hover, a.load-more, a.load-more:visited, .meta .tags a.tag, .post-wrap .excerpt a, .post-wrap .excerpt a:visited, a.post, a.post:visited {
+a.no-border, .branding h1 a:hover, a.load-more, a.load-more:visited, .widget .tags a.tag, .post-wrap .excerpt a, .post-wrap .excerpt a:visited, a.post, a.post:visited {
   border: none;
   box-shadow: none; }
 
@@ -383,7 +386,7 @@ table {
     display: block; }
     .row .col:last-child, .row .col.twelvecol {
       margin-right: 0; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       .row .col {
         float: none;
         margin: 30px 0;
@@ -741,6 +744,17 @@ a.load-more, a.load-more:visited {
 
 .widget {
   margin-bottom: 60px; }
+  .widget .tags {
+    margin-top: 30px; }
+    .widget .tags .tag {
+      background: #43444b;
+      color: #fff;
+      padding: 7px 10px;
+      font-size: 1.45rem;
+      display: inline-block;
+      margin-bottom: 6px; }
+      .widget .tags .tag:hover, .widget .tags .tag:active {
+        background: #0293dd; }
   .widget a {
     font-weight: 600; }
   .widget h4 {
@@ -756,7 +770,7 @@ a.load-more, a.load-more:visited {
       border: none;
       color: inherit; }
 
-.widget hr, .pagetitle hr, .intro hr {
+.widget hr, .pagetitle hr, .intro hr, .related hr {
   max-width: 30px;
   margin: 0 0 30px;
   max-width: 30px; }
@@ -847,11 +861,14 @@ footer {
 .entry {
   margin-top: 8px; }
 
+.single .img-featured {
+  display: block;
+  margin: 40px 0; }
 .single .pagetitle {
   text-align: center; }
   .single .pagetitle h2 {
     font-size: 4rem;
-    margin: 0 0 7px 0; }
+    margin: 0 0 8px 0; }
     @media only screen and (max-width: 768px) {
       .single .pagetitle h2 {
         font-size: 2.8rem; } }
@@ -862,39 +879,44 @@ footer {
   font-size: 2rem; }
 .single .row.single-wrap {
   max-width: 900px; }
-.single .img-blog img {
+.single .entry .img-blog img {
   margin: 35px auto 45px;
   display: block; }
+.single .related {
+  margin: 100px 0; }
+  .single .related h3 {
+    margin-top: 30px; }
+  .single .related h4 {
+    margin: 12px 0 0; }
+  .single .related .row .col {
+    margin-top: 0;
+    margin-bottom: 0; }
 
 .meta {
-  margin: 40px 0; }
-  .meta .cats {
-    font-family: "Roboto", "Helvetica Neue", sans-serif; }
-  .meta .cat {
-    font-weight: 700; }
-  .meta h4 {
-    margin: 0 0 20px;
-    font-size: 1.8rem; }
+  margin: 40px 0;
+  font-size: 1.45rem; }
+  .meta .cats, .meta .tags {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    display: inline-block;
+    color: #737d8d; }
   .meta .tags {
-    margin-top: 30px; }
-    .meta .tags .tag {
-      background: #43444b;
-      color: #fff;
-      padding: 7px 10px;
-      font-size: 1.45rem;
-      display: inline-block;
-      margin-bottom: 6px; }
-      .meta .tags .tag:hover, .meta .tags .tag:active {
-        background: #0293dd; }
+    margin-left: 40px; }
+  .meta .cats a, .meta .tags a {
+    font-weight: 700;
+    color: #252627;
+    display: inline-block;
+    margin-right: 6px; }
+  .meta h3 {
+    margin: 0 0 20px; }
   .meta hr {
     width: 40px;
     margin: 80px 0 20px 0; }
-  .meta .post-wrap h3.title {
+  .meta .post-wrap h4.title {
     line-height: 1.25;
     margin-bottom: 5px;
     font-size: 1.8rem;
     display: inline; }
-    .meta .post-wrap h3.title a {
+    .meta .post-wrap h4.title a {
       color: inherit; }
   .meta .post-wrap .img-blog img {
     margin: 0 0 10px;
@@ -1031,11 +1053,17 @@ a.post, a.post:visited {
         background-attachment: inherit; } }
   .page-banner .pagetitle {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     color: #fff; }
 
 .error-msg {
   margin-top: 25px; }
+
+.search-icon {
+  fill: #111; }
+  @media only screen and (max-width: 768px) {
+    .search-icon {
+      fill: #fff; } }
 
 .search-form {
   width: 350px;
@@ -1091,7 +1119,7 @@ a.post, a.post:visited {
 
 .wp-caption.alignleft, .wp-caption.alignright {
   background-color: rgba(255, 255, 255, 0.88);
-  padding: 20px 20px 0; }
+  padding: 20px 20px 0 20px; }
 
 .alignnone {
   display: block;

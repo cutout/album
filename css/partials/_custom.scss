@@ -168,6 +168,21 @@ a.load-more,a.load-more:visited {
 
 .widget {
   margin-bottom:60px;
+  .tags {
+    margin-top:30px;
+    .tag {
+      background: $bg-dark;
+      color: #fff;
+      padding: 7px 10px;
+      font-size: $font-smaller;
+      display: inline-block;
+      margin-bottom: 6px;
+      @extend .no-border;
+      &:hover,&:active {
+        background: $link-color-hover;
+      }
+    }
+  }
   a {
     font-weight: 600;
   }
@@ -191,7 +206,7 @@ a.load-more,a.load-more:visited {
   }
 }
 
-.widget hr, .pagetitle hr, .intro hr {
+.widget hr, .pagetitle hr, .intro hr, .related hr {
   max-width: 30px;
   margin: 0 0 30px;
   max-width: 30px;
@@ -312,11 +327,15 @@ footer {
 }
 
 .single {
+  .img-featured {
+    display: block;
+    margin: 40px 0;
+  }
   .pagetitle {
     text-align: center;
     h2 {
       font-size: $font-large;
-      margin: 0 0 7px 0;
+      margin: 0 0 8px 0;
       @include screen-sm {
         font-size: $font-head-tablet;
       }
@@ -331,44 +350,53 @@ footer {
   .row.single-wrap {
     max-width: 900px;
   }
-  .img-blog img {
-    margin:35px auto 45px;
-    display: block;
+  .entry {
+      .img-blog img {
+      margin:35px auto 45px;
+      display: block;
+    }
+  }
+  .related {
+    margin: 100px 0;
+    h3 {
+      margin-top: 30px;
+    }
+    h4 {
+      margin:12px 0 0;
+    }
+    .row .col {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
+
 .meta {
   margin:40px 0;
-  .cats {
-    font-family: $font-family-display
-  }
-  .cat {
-    font-weight: 700;
-  }
-  h4 {
-    margin:0 0 20px;
-    font-size: $font-body
+  font-size: $font-smaller;
+  .cats,.tags {
+    font-family: $font-family-display;
+    display: inline-block;
+    color:$text-color-lt
   }
   .tags {
-    margin-top:30px;
-    .tag {
-      background: $bg-dark;
-      color: #fff;
-      padding: 7px 10px;
-      font-size: $font-smaller;
-      display: inline-block;
-      margin-bottom: 6px;
-      @extend .no-border;
-      &:hover,&:active {
-        background: $link-color-hover;
-      }
-    }
+    margin-left: 40px;
+  }
+  .cats a,.tags a {
+    font-weight: 700;
+    color: $text-color;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  h3 {
+    margin:0 0 20px;
   }
   hr {
     width:40px;
     margin:80px 0 20px 0;
   }
   .post-wrap {
-    h3.title {
+    h4.title {
       line-height: 1.25;
       margin-bottom: 5px;
       font-size: $font-body;
@@ -565,13 +593,20 @@ a.post,a.post:visited {
   }
   .pagetitle {
     position: absolute;
-    bottom:10%;
+    bottom:5%;
     color:#fff;
   }
 }
 
 .error-msg {
   margin-top: 25px;
+}
+
+.search-icon {
+  fill:#111;
+  @include screen-sm {
+    fill:#fff;
+  }
 }
 
 .search-form {
@@ -639,7 +674,7 @@ a.post,a.post:visited {
 .wp-caption {
   &.alignleft,&.alignright {
     background-color: rgba(255,255,255,.88);
-    padding: 20px 20px 0;
+    padding: 20px 20px 0 20px;
   }
 }
 

@@ -150,6 +150,9 @@
               opacity:1;
             }
           }
+          @include screen-sm {
+            margin-top: 20px;
+          }
         }
         a,a:visited {
             text-decoration: none;
