@@ -4,7 +4,6 @@
   position: fixed;
   width: 100%;
   z-index: 999;
-  padding: 10px;
   @include screen-sm {
     display: none;
   }
@@ -30,7 +29,9 @@
 .right-border {
     right: 0;
 }
-
+.top-border,.bottom-border {
+  height:25px;
+}
 .container {
   padding: $screen-padding-large;
   @include screen-sm {
@@ -73,6 +74,9 @@
     a {
       border:none;
       color: inherit;
+      &:hover {
+        @extend .no-border;
+      }
     }
   }
   .small {
@@ -86,9 +90,9 @@
 }
 
 .intro {
+  margin:12% 0 11%;
   h3 {
     font-size: $font-giant;
-    margin:13% 0 16%;
     @include animation(('fade-in 1.2s','slide-from-left 1.2s'));
     width:75%;
     @include screen-laptop {
@@ -147,22 +151,23 @@
 }
 
 a.load-more,a.load-more:visited {
-  margin-top: 40px;
+  margin-top: 44px;
   background-color: transparent;
   border:2px solid $border-dark;
   border-radius: 4px;
   color: inherit;
-  padding:16px;
+  padding:18px;
   display: block;
   @extend .no-border;
   &:hover,&:active {
-    background: $border-dark;
-    color: inherit;
+    background: #73757d;
+    border-color: #73757d;
+    color: #fff;
   }
 }
 
 .widget {
-  margin-bottom:50px;
+  margin-bottom:60px;
   a {
     font-weight: 600;
   }
@@ -186,22 +191,22 @@ a.load-more,a.load-more:visited {
   }
 }
 
-.widget hr, .pagetitle hr {
+.widget hr, .pagetitle hr, .intro hr {
   max-width: 30px;
   margin: 0 0 30px;
   max-width: 30px;
 }
 
-.date {
+.date,.comments-number {
   color: $text-color-lt;
   font-size: $font-smaller
 }
 
 
 .widgets-footer {
-  margin: 50px 0 200px;
+  margin: 50px 0 300px;
   hr.divider {
-    margin: 50px 0;
+    margin: 60px 0;
   }
   .widget.col {
     @include screen-sm {
@@ -267,16 +272,16 @@ footer {
 .more {
   i {
     color: inherit;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     border:none;
     display: inline-block;
     margin-left: 4px;
     color:#fff;
     background: $link-color;
-    width:30px;
-    height:30px;
+    width:25px;
+    height:25px;
+    line-height: 25px;
     text-align: center;
-    line-height: 30px;
     &:hover,&:active {
       background: $link-color-hover
     }
@@ -292,17 +297,12 @@ footer {
     margin-bottom: 3px;
     color: $text-color-lt;
     font-size: $font-smaller;
-    @include screen-sm {
-      text-align: center;
-      margin-bottom: -35px;
-    }
   }
   h2 {
     font-size: $font-giant;
     @include screen-sm {
       font-size: $font-head-tablet;
-      text-align: center;
-      margin:12% 0 10%;
+      line-height: 1.2;
     }
   }
 }
@@ -317,6 +317,12 @@ footer {
     h2 {
       font-size: $font-large;
       margin: 0 0 7px 0;
+      @include screen-sm {
+        font-size: $font-head-tablet;
+      }
+    }
+    @include screen-sm {
+      text-align: left;
     }
   }
   article {
@@ -595,7 +601,8 @@ a.post,a.post:visited {
 
 .alignright {
   float: right;
-  margin:1.5rem -15% 1.5rem 3.2rem;
+  margin-right: -20%;
+  margin-left: 3.2rem;
   @include screen-med {
     margin-right: 0;
   }
@@ -612,24 +619,34 @@ a.post,a.post:visited {
 
 .alignleft {
   float: left;
-  margin:1.5rem 3.2rem 1.5rem -15%;
+  margin-right:3.2rem;
+  margin-left: -20%;
   @include screen-med {
     margin-left: 0;
   }
 }
 
 .alignright,.alignleft {
-  max-width: 50%;
+  max-width: 60%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   @include screen-sm {
     @include stack;
     max-width: 100%;
   }
 }
 
+.wp-caption {
+  &.alignleft,&.alignright {
+    background-color: rgba(255,255,255,.88);
+    padding: 20px 20px 0;
+  }
+}
+
 .alignnone {
   display: block;
   width:100%;
-  margin:30px auto;
+  margin:40px auto;
 }
 
 .wp-caption {

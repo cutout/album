@@ -1,5 +1,5 @@
 $(function(){
-    
+
 // Loading State
 setTimeout(function(){$("body").addClass("loading")},200);
 setTimeout(function(){$("body").addClass("loaded")},3000);
@@ -24,7 +24,7 @@ transformicons.add('.tcon');
 
 // Fade on scroll
 $(window).on('scroll',function(){
-  $("").css("opacity", 1 - $(window).scrollTop() / 880);
+  $(".page-banner .img-blog").css("opacity", 1 - $(window).scrollTop() / 550);
 });
 
 
@@ -49,7 +49,7 @@ mediaCheck({
 
 
 // Change class on scroll
-$(window).scroll(function() {    
+$(window).scroll(function() {
   var scroll = $(window).scrollTop();
   if (scroll >= 150) {
       $(".navbar").addClass("nav-smaller");

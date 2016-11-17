@@ -180,7 +180,7 @@
         display: block;
         right: 50px;
         top: 44px; } }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 600px) {
       .menu.col .tcon {
         top: 11px;
         right: 30px; } }
@@ -243,7 +243,7 @@ a, a:visited {
     border-bottom: 3px solid #58c6ff;
     box-shadow: inset 0 -5px 0 #58c6ff; }
 
-a.no-border, a.load-more, a.load-more:visited, .meta .tags a.tag, .post-wrap .excerpt a, .post-wrap .excerpt a:visited, a.post, a.post:visited {
+a.no-border, .branding h1 a:hover, a.load-more, a.load-more:visited, .meta .tags a.tag, .post-wrap .excerpt a, .post-wrap .excerpt a:visited, a.post, a.post:visited {
   border: none;
   box-shadow: none; }
 
@@ -309,10 +309,15 @@ h6 {
   font-size: .8rem; }
 
 blockquote {
-  margin: 30px 55px;
+  margin: 40px 60px;
   border-left: 3px solid #bfc1cc;
   padding-left: 25px;
   color: #737d8d; }
+  @media only screen and (max-width: 768px) {
+    blockquote {
+      padding-left: 20px;
+      margin-left: 0;
+      margin-right: 0; } }
 
 pre {
   margin: 3rem 0;
@@ -378,7 +383,7 @@ table {
     display: block; }
     .row .col:last-child, .row .col.twelvecol {
       margin-right: 0; }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 600px) {
       .row .col {
         float: none;
         margin: 30px 0;
@@ -582,8 +587,7 @@ textarea {
   background: #e8e9ee;
   position: fixed;
   width: 100%;
-  z-index: 999;
-  padding: 10px; }
+  z-index: 999; }
   @media only screen and (max-width: 768px) {
     .top-border, .bottom-border,
     .left-border, .right-border {
@@ -609,12 +613,15 @@ textarea {
 .right-border {
   right: 0; }
 
+.top-border, .bottom-border {
+  height: 25px; }
+
 .container {
   padding: 80px; }
   @media only screen and (max-width: 768px) {
     .container {
       padding: 50px; } }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     .container {
       padding: 30px; } }
 
@@ -622,7 +629,7 @@ textarea {
   .container, .row {
     padding-left: 50px;
     padding-right: 50px; } }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .container, .row {
     padding-left: 30px;
     padding-right: 30px; } }
@@ -659,33 +666,34 @@ textarea {
     font-weight: 100;
     font-family: "Inconsolata", courier;
     color: #737d8d; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     .branding {
       margin-top: -14px; } }
 
-.intro h3 {
-  font-size: 5.6rem;
-  margin: 13% 0 16%;
-  -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
-  -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
-  -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
-  -o-animation: fade-in 1.2s, slide-from-left 1.2s;
-  animation: fade-in 1.2s, slide-from-left 1.2s;
-  width: 75%; }
-  @media only screen and (max-width: 1440px) {
-    .intro h3 {
-      width: auto; } }
-  @media only screen and (max-width: 1000px) {
-    .intro h3 {
-      font-size: 3.5rem; } }
-  @media only screen and (max-width: 768px) {
-    .intro h3 {
-      font-size: 3.2rem;
-      margin: 17% 0 24%; } }
-  @media only screen and (max-width: 500px) {
-    .intro h3 {
-      font-size: 2.2rem;
-      margin: 23% 0 21%; } }
+.intro {
+  margin: 12% 0 11%; }
+  .intro h3 {
+    font-size: 5.6rem;
+    -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
+    -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
+    -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
+    -o-animation: fade-in 1.2s, slide-from-left 1.2s;
+    animation: fade-in 1.2s, slide-from-left 1.2s;
+    width: 75%; }
+    @media only screen and (max-width: 1440px) {
+      .intro h3 {
+        width: auto; } }
+    @media only screen and (max-width: 1000px) {
+      .intro h3 {
+        font-size: 3.5rem; } }
+    @media only screen and (max-width: 768px) {
+      .intro h3 {
+        font-size: 3.2rem;
+        margin: 17% 0 24%; } }
+    @media only screen and (max-width: 600px) {
+      .intro h3 {
+        font-size: 2.2rem;
+        margin: 23% 0 21%; } }
 
 .filtering.col {
   width: 20%; }
@@ -719,19 +727,20 @@ textarea {
   width: 76%; }
 
 a.load-more, a.load-more:visited {
-  margin-top: 40px;
+  margin-top: 44px;
   background-color: transparent;
   border: 2px solid #bfc1cc;
   border-radius: 4px;
   color: inherit;
-  padding: 16px;
+  padding: 18px;
   display: block; }
   a.load-more:hover, a.load-more:active, a.load-more:visited:hover, a.load-more:visited:active {
-    background: #bfc1cc;
-    color: inherit; }
+    background: #73757d;
+    border-color: #73757d;
+    color: #fff; }
 
 .widget {
-  margin-bottom: 50px; }
+  margin-bottom: 60px; }
   .widget a {
     font-weight: 600; }
   .widget h4 {
@@ -747,19 +756,19 @@ a.load-more, a.load-more:visited {
       border: none;
       color: inherit; }
 
-.widget hr, .pagetitle hr {
+.widget hr, .pagetitle hr, .intro hr {
   max-width: 30px;
   margin: 0 0 30px;
   max-width: 30px; }
 
-.date {
+.date, .comments-number {
   color: #737d8d;
   font-size: 1.45rem; }
 
 .widgets-footer {
-  margin: 50px 0 200px; }
+  margin: 50px 0 300px; }
   .widgets-footer hr.divider {
-    margin: 50px 0; }
+    margin: 60px 0; }
   @media only screen and (max-width: 768px) {
     .widgets-footer .widget.col {
       float: none;
@@ -806,16 +815,16 @@ footer {
 
 .more i {
   color: inherit;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   border: none;
   display: inline-block;
   margin-left: 4px;
   color: #fff;
   background: #0278b5;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px; }
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center; }
   .more i:hover, .more i:active {
     background: #0293dd; }
 
@@ -828,17 +837,12 @@ footer {
     margin-bottom: 3px;
     color: #737d8d;
     font-size: 1.45rem; }
-    @media only screen and (max-width: 768px) {
-      .pagetitle .type {
-        text-align: center;
-        margin-bottom: -35px; } }
   .pagetitle h2 {
     font-size: 5.6rem; }
     @media only screen and (max-width: 768px) {
       .pagetitle h2 {
-        font-size: 3rem;
-        text-align: center;
-        margin: 12% 0 10%; } }
+        font-size: 2.8rem;
+        line-height: 1.2; } }
 
 .entry {
   margin-top: 8px; }
@@ -848,6 +852,12 @@ footer {
   .single .pagetitle h2 {
     font-size: 4rem;
     margin: 0 0 7px 0; }
+    @media only screen and (max-width: 768px) {
+      .single .pagetitle h2 {
+        font-size: 2.8rem; } }
+  @media only screen and (max-width: 768px) {
+    .single .pagetitle {
+      text-align: left; } }
 .single article {
   font-size: 2rem; }
 .single .row.single-wrap {
@@ -930,7 +940,7 @@ article p img {
 .post-wrap {
   margin-bottom: 70px; }
   .post-wrap h3 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     border-bottom: 1px solid transparent;
     display: inline; }
     @media only screen and (max-width: 768px) {
@@ -1049,7 +1059,8 @@ a.post, a.post:visited {
 
 .alignright {
   float: right;
-  margin: 1.5rem -15% 1.5rem 3.2rem; }
+  margin-right: -20%;
+  margin-left: 3.2rem; }
   @media only screen and (max-width: 1000px) {
     .alignright {
       margin-right: 0; } }
@@ -1061,13 +1072,16 @@ a.post, a.post:visited {
 
 .alignleft {
   float: left;
-  margin: 1.5rem 3.2rem 1.5rem -15%; }
+  margin-right: 3.2rem;
+  margin-left: -20%; }
   @media only screen and (max-width: 1000px) {
     .alignleft {
       margin-left: 0; } }
 
 .alignright, .alignleft {
-  max-width: 50%; }
+  max-width: 60%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem; }
   @media only screen and (max-width: 768px) {
     .alignright, .alignleft {
       float: none;
@@ -1075,10 +1089,14 @@ a.post, a.post:visited {
       width: auto;
       max-width: 100%; } }
 
+.wp-caption.alignleft, .wp-caption.alignright {
+  background-color: rgba(255, 255, 255, 0.88);
+  padding: 20px 20px 0; }
+
 .alignnone {
   display: block;
   width: 100%;
-  margin: 30px auto; }
+  margin: 40px auto; }
 
 .wp-caption {
   text-align: center; }

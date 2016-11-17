@@ -146,10 +146,15 @@ h6 {
 }
 
 blockquote {
-    margin:30px 55px;
+    margin:40px 60px;
     border-left: 3px solid $border-dark;
     padding-left: 25px;
-    color:$text-color-lt
+    color:$text-color-lt;
+    @include screen-sm {
+      padding-left:20px;
+      margin-left: 0;
+      margin-right: 0;
+    }
 }
 
 pre {
