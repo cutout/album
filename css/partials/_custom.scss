@@ -169,7 +169,6 @@ a.load-more,a.load-more:visited {
 .widget {
   margin-bottom:60px;
   .tags {
-    margin-top:30px;
     .tag {
       background: $bg-dark;
       color: #fff;
@@ -331,6 +330,9 @@ footer {
     display: block;
     margin: 40px 0;
   }
+  .page-banner hr {
+    margin-top: 20px;
+  }
   .pagetitle {
     text-align: center;
     h2 {
@@ -371,11 +373,13 @@ footer {
   }
 }
 
-.meta {
+.meta.post-footer {
   margin:40px 0;
   font-size: $font-smaller;
+  nav {
+    margin-top: 50px;
+  }
   .cats,.tags {
-    font-family: $font-family-display;
     display: inline-block;
     color:$text-color-lt
   }
@@ -395,27 +399,21 @@ footer {
     width:40px;
     margin:80px 0 20px 0;
   }
-  .post-wrap {
-    h4.title {
-      line-height: 1.25;
-      margin-bottom: 5px;
-      font-size: $font-body;
-      display: inline;
-      a {
-        color: inherit;
-      }
-    }
-    .img-blog img {
-      margin:0 0 10px;
-      display: block;
-    }
-  }
-  .col {
-    margin-top:0;
-    margin-bottom: 0;
-  }
 }
 
+.col.sidebar {
+  margin-top: 38px;
+  .meta {
+    margin-bottom: 75px;
+    .date,.comments-number {
+      margin-bottom: 8px;
+    }
+    .cats a {
+      color: inherit;
+      font-size: $font-smaller;
+    }
+  }
+}
 
 article {
   @include screen-sm {
@@ -593,8 +591,13 @@ a.post,a.post:visited {
   }
   .pagetitle {
     position: absolute;
-    bottom:5%;
+    bottom:10%;
     color:#fff;
+    width:100%;
+    text-align: left;
+  }
+  hr {
+    margin: 0;
   }
 }
 
@@ -649,6 +652,25 @@ a.post,a.post:visited {
   }
   .date {
     margin-bottom: 24px;
+  }
+  .post-wrap {
+    h3.title {
+      line-height: 1.25;
+      margin-bottom: 5px;
+      font-size: $font-body;
+      display: inline;
+      a {
+        color: inherit;
+      }
+    }
+    .img-blog img {
+      margin:0 0 10px;
+      display: block;
+    }
+  }
+  .col {
+    margin-top:0;
+    margin-bottom: 0;
   }
 }
 
