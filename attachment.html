@@ -29,7 +29,7 @@
 
 	<script src="js/modernizer.custom.js"></script>
 </head>
-<body class="error404">
+<body class="attachment">
 	<div class="top-border"></div>
 	<!--<div class="loader"></div>-->
 	<div class="bottom-border"></div>
@@ -52,44 +52,47 @@
 				<h2 class="small">Photographer &amp; Illustrator</h2>
 			-->
 			</div>
-			<nav class="menu col right">
-				<ul>
-            <li><a href="page.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="archive.html">Archive</a></li>
-						<li><a href="single.html">Single</a></li>
-						<li><a href="404.html">Error</a></li>
-						<li class="search">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="search-icon">
-							  <path fill-rule="evenodd" d="M8.72540529,11.3467256 C7.90760672,11.7644185 6.98131488,12 6,12 C2.68629134,12 0,9.31370866 0,6 C0,2.68629134 2.68629134,0 6,0 C9.31370866,0 12,2.68629134 12,6 C12,7.24246438 11.6223475,8.39672324 10.9755697,9.35424938 L15.1819805,13.5606602 C15.1819805,13.5606602 15.8890873,14.267767 15.1819805,14.9748737 L14.4748737,15.6819805 C13.767767,16.3890873 13.0606602,15.6819805 13.0606602,15.6819805 L8.72540529,11.3467256 L8.72540529,11.3467256 Z M2,6 C2,3.79086084 3.79086084,2 6,2 C8.20913916,2 10,3.79086084 10,6 C10,8.20913916 8.20913916,10 6,10 C3.79086084,10 2,8.20913916 2,6 L2,6 Z"/>
-							</svg>
-						</li>
-        </ul>
-        <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
-            <span class="tcon-menu__lines" aria-hidden="true"></span>
-            <span class="tcon-visuallyhidden">toggle menu</span>
-        </button>
-    	</nav>
+				<nav class="menu col right">
+					<ul>
+	            <li><a href="page.html">About</a></li>
+	            <li><a href="blog.html">Blog</a></li>
+	            <li><a href="archive.html">Archive</a></li>
+							<li><a href="single.html">Single</a></li>
+							<li><a href="404.html">Error</a></li>
+							<li class="search">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="search-icon">
+								  <path fill-rule="evenodd" d="M8.72540529,11.3467256 C7.90760672,11.7644185 6.98131488,12 6,12 C2.68629134,12 0,9.31370866 0,6 C0,2.68629134 2.68629134,0 6,0 C9.31370866,0 12,2.68629134 12,6 C12,7.24246438 11.6223475,8.39672324 10.9755697,9.35424938 L15.1819805,13.5606602 C15.1819805,13.5606602 15.8890873,14.267767 15.1819805,14.9748737 L14.4748737,15.6819805 C13.767767,16.3890873 13.0606602,15.6819805 13.0606602,15.6819805 L8.72540529,11.3467256 L8.72540529,11.3467256 Z M2,6 C2,3.79086084 3.79086084,2 6,2 C8.20913916,2 10,3.79086084 10,6 C10,8.20913916 8.20913916,10 6,10 C3.79086084,10 2,8.20913916 2,6 L2,6 Z"/>
+								</svg>
+							</li>
+	        </ul>
+	        <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
+	            <span class="tcon-menu__lines" aria-hidden="true"></span>
+	            <span class="tcon-visuallyhidden">toggle menu</span>
+	        </button>
+    		</nav>
 		</header>
-		<div class="row">
-			<header class="pagetitle">
-			<h2>Error 404</h2>
-			<hr />
-			</header>
-		</div>
+
 		<div class="main" role="main">
-			<div class="row error-msg">
-				<!--<h3>Oops! That page cannot be found.</h3>-->
-				<p>
-					It looks like nothing was found at this location. Why not try searching for something?
-				</p>
-				<form role="search" method="get" class="search-form" style="background:#fff;">
-					<label>
-						<span class="screen-reader-text">Search for:</span>
-						<input autofocus type="search" class="search-field" placeholder="Search…" value="" name="s" title="Search for:">
-					</label>
-					<button class="search-submit"><i class="fa fa-search"></i></button>
-				</form>
+			<div class="row attach-wrap">
+				<article class="page col ninecol">
+					<div class="entry">
+						<img src="img/img-blog.jpg">
+					</div>
+				</article>
+				<div class="col threecol right widgets sidebar">
+					<div class="meta">
+						<h2>My new camera</h2>
+						<div class="date">
+							Dec 19, 2106
+						</div>
+						<p class="desc">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt dapibus erat, non aliquet magna ultrices vitae pellentesque ligula orci, mattis in arcu non, euismod placerat mauris.
+						</p>
+					</div>
+					<nav>
+						<a href="#">&larr; Previous</a> / <a href="#">Next &rarr;</a>
+					</nav>
+				</div>
 			</div><!--/row-->
 		</div><!--/main-->
 	</div><!--/wrapper-->
@@ -97,13 +100,13 @@
 			<footer class="container bottom">
 				<div class="row">
 					<div class="col more right">
-						<a href="#" class="no-border">
+						<a href="#">
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</a>
-						<a href="#" class="no-border">
+						<a href="#">
 							<i class="fa fa-facebook" aria-hidden="true"></i>
 						</a>
-						<a href="#" class="no-border">
+						<a href="#">
 							<i class="fa fa-dribbble" aria-hidden="true"></i>
 						</a>
 					</div>
@@ -114,8 +117,8 @@
 							<span class="email">
 								<a href="mailto:hello@darrenhoyt.com">hello@darrenhoyt.com</a>
 							</span>
-					</div><!--/contact-->
-				</div><!--row-->
+					</div>
+				</div>
 			</footer>
 
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

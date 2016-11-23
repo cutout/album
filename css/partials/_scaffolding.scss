@@ -43,7 +43,7 @@ body,html {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -210px;
+  margin-bottom: -160px;
   &:after {
     content: "";
     display: block;
@@ -51,6 +51,9 @@ body,html {
   @include screen-laptop {
       min-width:0;
       max-width:$content-width;
+  }
+  @include screen-sm {
+    margin-bottom: auto;
   }
 }
 
@@ -73,7 +76,7 @@ a.no-border {
   box-shadow: none;
 }
 
-a, li, img, input,button,.btn,p,h3,.fa {
+a, li, img, input,button,.btn,p,h3,.fa,.read-more {
     @include transition(all 0.2s ease-in-out);
 }
 
@@ -85,7 +88,7 @@ p {
 hr {
     display: block;
     border:none;
-    border-bottom: 2px solid $border-dark;
+    border-bottom: 4px solid $border-dark;
     height:0;
     clear: both;
     box-sizing: content-box;

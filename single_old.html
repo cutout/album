@@ -29,7 +29,7 @@
 
 	<script src="js/modernizer.custom.js"></script>
 </head>
-<body class="page">
+<body class="single page">
 	<div class="top-border"></div>
 	<!--<div class="loader"></div>-->
 	<div class="bottom-border"></div>
@@ -38,8 +38,19 @@
 	<div class="wrapper">
 		<header class="mast container">
 			<div class="branding col left">
-				<h1><a href="#">Hoyt Studios</a></h1>
-				<div class="small">Photographer &amp; Illustrator</div>
+				<a href='/album/'>
+					<svg class="logomark" xmlns="http://www.w3.org/2000/svg" width="302" height="269" viewBox="0 0 302 269">
+					  <g fill="#000000" fill-rule="evenodd">
+					    <polygon points="301.868 50.838 297.065 52.387 292.377 54.116 287.993 55.99 283.71 57.98 279.529 60.169 275.666 62.556 272.02 65.006 268.677 67.582 265.436 70.284 262.514 73.121 259.909 76.022 257.508 79.048 255.424 82.137 253.645 85.299 252.183 88.514 251.04 91.739 250.1 95.017 249.579 98.368 249.579 155.437 184.022 73.31 184.022 57.926 184.644 54.576 185.483 51.288 186.742 48.064 188.189 44.848 189.969 41.687 192.052 38.597 194.454 35.571 197.073 32.671 199.995 29.842 203.12 27.131 206.564 24.555 210.225 22.114 214.088 19.727 218.153 17.539 222.436 15.539 226.921 13.675 231.623 11.936 236.311 10.387"/>
+					    <polygon points="160.843 110.735 183.501 139.08 138.2 167.029"/>
+					    <polygon points="157.921 40.462 66.161 268.728 .72 228.277 92.364 .02"/>
+					  </g>
+					</svg>
+				</a>
+
+				<!--<h1><a href="/">Hoyt Studios</a></h1>
+				<h2 class="small">Photographer &amp; Illustrator</h2>
+			-->
 			</div>
 			<nav class="menu col right">
 				<ul>
@@ -60,24 +71,29 @@
         </button>
     	</nav>
 		</header>
-		<div class="page-banner">
-			<div class="img-blog">
-			</div>
-			<div class="row">
-				<header class="pagetitle">
-				<h2>Proin cursus sem sit amet urna</h2>
-				<hr />
-				</header>
-			</div>
+		<div class="row single-wrap">
+			<header class="pagetitle">
+			<h2>Proin cursus sem sit amet urna</h2>
+				<span class="date">
+					Dec 12, 2016
+				</span>
+				&bull;
+				<span class="comments-number">
+					(7) comments
+				</span>
+			</header>
 		</div>
 		<div class="main" role="main">
 			<div class="row single-wrap">
-				<div class="col ninecol">
-					<article>
+				<div class="img-featured">
+						<img src="img/img-blog.jpg" />
+				</div>
+						<article>
 							<div class="entry">
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt dapibus erat, non aliquet magna ultrices vitae. Pellentesque ligula orci, mattis in arcu non, euismod placerat mauris. Duis eu arcu vitae magna gravida scelerisque. Suspendisse vitae bibendum ipsum. Nullam imperdiet ornare nibh, et aliquet neque ultrices id. Quisque facilisis mollis commodo. Suspendisse potenti. Nullam accumsan porttitor convallis. Donec sed mattis ligula. Pellentesque aliquam, metus sit amet sodales convallis, ipsum dolor sollicitudin felis, eu egestas metus eros vitae justo. Aliquam a nulla urna. Nullam auctor dui sit amet sagittis porta. Suspendisse mollis rutrum elit in dignissim.
 								</p>
+								<img class="alignnone" src="img/img-blog.jpg">
 								<p>
 									Proin congue eros quis tristique aliquam. Cras vel sem ante. Duis interdum ligula a nibh aliquam auctor. Suspendisse et finibus eros. Ut elementum ornare ultrices. Donec porta est nibh, non lacinia magna volutpat ac. Donec auctor orci at lorem porta, nec ultricies diam iaculis. Duis vel ligula aliquam, volutpat libero non, aliquet odio. Nulla et diam pretium enim luctus scelerisque eu imperdiet erat. Nunc a rutrum urna. Mauris varius sed mi eget laoreet. Integer eleifend vestibulum neque, luctus posuere purus efficitur sed. Morbi eu leo felis. Integer tortor est, ornare sit amet lacus at, porta semper erat. Phasellus quis justo leo. Curabitur in nibh dapibus, fermentum augue non, cursus tortor.
 								</p>
@@ -114,107 +130,95 @@
 									Sed at pellentesque leo. Nullam faucibus leo vehicula arcu tempus imperdiet. Ut ultrices nibh sit amet est gravida, sit amet tincidunt tortor varius. Duis vel iaculis magna. Donec ultrices cursus nunc, a aliquam libero gravida in. Nulla nec lectus quis nibh imperdiet condimentum a ut elit. Proin maximus, leo egestas commodo gravida, ipsum odio viverra quam, in lacinia purus velit id leo. Vivamus tellus arcu, commodo a erat sollicitudin, ornare ultricies turpis. In scelerisque dolor tortor, sit amet vulputate magna cursus at. Aliquam erat volutpat.
 								</p>
 							</div>
-					</article>
-				</div>
-				<div class="col threecol sidebar">
-					<div class="widget meta">
-							<div class="date">
-								Dec 12, 2016
-							</div>
-							<div class="comments-number">
-								7 comments
-							</div>
-							<div class="cats">
-								<a href="#">Sports</a>
-							</div>
-						</div>
-					<div class="widget">
-						<h4>Tags</h4>
-						<hr />
-						<div class="tags">
-							<a href="#" class="tag">soccer</a> <a href="#" class="tag">gerrard</a> <a href="#" class="tag">liverpool</a> <a href="#" class="tag">adidas</a>
-						</div>
-					</div><!--widget-->
-				</div><!--sidebar-->
-			</div>
-			<div class="row">
-						<div class="meta">
-							<div class="cats">
-								<span class="cat">Category:</span> <a href="#">Sports</a>
-							</div>
-							<div class="tags">
+						</article>
+						<div class="meta post-footer">
+							<span class="cats">
+								<span class="cat-title">Posted in</span> <a href="#">Sports</a>
+							</span>
+							<span class="tags">
+								<span class="tag-title">Tagged as</span>
 								<a href="#" class="tag">soccer</a> <a href="#" class="tag">gerrard</a> <a href="#" class="tag">liverpool</a> <a href="#" class="tag">adidas</a>
-							</div>
+								</span>
+								<!--<nav>
+									<div>
+										Prev: When Artists Break Out of the Box
+									</div>
+									<div>
+										Next: When Artists Break Out of the Box
+									</div>
+								</nav>-->
 						</div>
+						<div class="related">
 							<hr />
-							<h4>Related</h4>
-							<div class="row inner related">
-								<div class="post-wrap col fourcol">
-									<div class="post">
-										<div class="img-blog">
-											<a href="#">
-												<img src="img/img-blog.jpg">
-											</a>
-										</div>
-										<div class="excerpt">
-											<a href="#">
-												<article>
-													<h3 class="title">
-														Mattis in arcu non euismod orci
-													</h3>
-												</article>
-											</a>
-										</div><!--/excerpt-->
-												<div class="date">
-													Oct 10, 2016
-												</div>
-									</div><!--/post-->
-								</div><!--/post-wrap-->
-								<div class="post-wrap col fourcol">
-									<div class="post">
-										<div class="img-blog">
-											<a href="#">
-												<img src="img/img-blog.jpg">
-											</a>
-										</div>
-										<div class="excerpt">
-											<a href="#">
-												<article>
-													<h3 class="title">
-														Mattis in arcu non euismod orci
-													</h3>
-												</article>
-											</a>
-										</div><!--/excerpt-->
-												<div class="date">
-													Oct 10, 2016
-												</div>
-									</div><!--/post-->
-								</div><!--/post-wrap-->
-								<div class="post-wrap col fourcol">
-									<div class="post">
-										<div class="img-blog">
-											<a href="#">
-												<img src="img/img-blog.jpg">
-											</a>
-										</div>
-										<div class="excerpt">
-											<a href="#">
-												<article>
-													<h3 class="title">
-														Mattis in arcu non euismod orci
-													</h3>
-												</article>
-											</a>
-										</div><!--/excerpt-->
-												<div class="date">
-													Oct 10, 2016
-												</div>
-									</div><!--/post-->
-								</div><!--/post-wrap-->
+								<h3>Related</h3>
+								<div class="row inner">
+									<div class="post-wrap col fourcol">
+										<div class="post">
+											<div class="img-blog">
+												<a href="#">
+													<img src="img/img-blog.jpg">
+												</a>
+											</div>
+											<div class="excerpt">
+												<a href="#">
+													<article>
+														<h3 class="title">
+															Mattis in arcu non euismod orci
+														</h3>
+													</article>
+												</a>
+											</div><!--/excerpt-->
+													<div class="date">
+														Oct 10, 2016
+													</div>
+										</div><!--/post-->
+									</div><!--/post-wrap-->
+									<div class="post-wrap col fourcol">
+										<div class="post">
+											<div class="img-blog">
+												<a href="#">
+													<img src="img/img-blog.jpg">
+												</a>
+											</div>
+											<div class="excerpt">
+												<a href="#">
+													<article>
+														<h3 class="title">
+															Mattis in arcu non euismod orci
+														</h3>
+													</article>
+												</a>
+											</div><!--/excerpt-->
+													<div class="date">
+														Oct 10, 2016
+													</div>
+										</div><!--/post-->
+									</div><!--/post-wrap-->
+									<div class="post-wrap col fourcol">
+										<div class="post">
+											<div class="img-blog">
+												<a href="#">
+													<img src="img/img-blog.jpg">
+												</a>
+											</div>
+											<div class="excerpt">
+												<a href="#">
+													<article>
+														<h3 class="title">
+															Mattis in arcu non euismod orci
+														</h3>
+													</article>
+												</a>
+											</div><!--/excerpt-->
+													<div class="date">
+														Oct 10, 2016
+													</div>
+										</div><!--/post-->
+									</div><!--/post-wrap-->
+								</div>
 							</div><!--/inner row-->
 						</div><!--/meta-->
-					</div>
+			</div><!--/row-->
 		</div><!--/main-->
 			<footer class="container bottom">
 				<div class="row">

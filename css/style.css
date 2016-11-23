@@ -224,7 +224,7 @@ body, html {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -210px; }
+  margin-bottom: -160px; }
   .wrapper:after {
     content: "";
     display: block; }
@@ -232,6 +232,9 @@ body, html {
     .wrapper {
       min-width: 0;
       max-width: 1440px; } }
+  @media only screen and (max-width: 768px) {
+    .wrapper {
+      margin-bottom: auto; } }
 
 body, input, textarea, select, button {
   font-family: "Inconsolata", courier; }
@@ -246,11 +249,11 @@ a, a:visited {
     border-bottom: 3px solid #58c6ff;
     box-shadow: inset 0 -5px 0 #58c6ff; }
 
-a.no-border, .branding h1 a:hover, a.load-more, a.load-more:visited, .widget .tags a.tag, .post-wrap .excerpt a, .post-wrap .excerpt a:visited, a.post, a.post:visited {
+a.no-border, .branding h1 a:hover, a.load-more, a.load-more:visited, .widget .tags a.tag, .more a, .more a:visited, .post-wrap .excerpt a, .post-wrap .excerpt a:visited, a.post, a.post:visited {
   border: none;
   box-shadow: none; }
 
-a, li, img, input, button, .btn, p, h3, .fa {
+a, li, img, input, button, .btn, p, h3, .fa, .read-more {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -264,7 +267,7 @@ p {
 hr {
   display: block;
   border: none;
-  border-bottom: 2px solid #bfc1cc;
+  border-bottom: 4px solid #bfc1cc;
   height: 0;
   clear: both;
   box-sizing: content-box; }
@@ -659,6 +662,15 @@ textarea {
   -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
   -o-animation: fade-in 1.2s, slide-from-left 1.2s;
   animation: fade-in 1.2s, slide-from-left 1.2s; }
+  .branding .logomark {
+    height: 91px;
+    width: 77px;
+    margin-top: -27px; }
+    @media only screen and (max-width: 600px) {
+      .branding .logomark {
+        height: 59px;
+        width: 52px;
+        margin-top: 0; } }
   .branding h1 {
     font-size: 2rem;
     margin-bottom: 4px; }
@@ -674,9 +686,16 @@ textarea {
       margin-top: -14px; } }
 
 .intro {
-  margin: 12% 0 11%; }
+  margin: 12% 0 13%; }
+  @media only screen and (max-width: 768px) {
+    .intro {
+      margin: 17% 0 24%; } }
+  @media only screen and (max-width: 600px) {
+    .intro {
+      margin: 23% 0 14%; } }
   .intro h3 {
-    font-size: 5.6rem;
+    font-size: 6.2rem;
+    font-weight: 100;
     -webkit-animation: fade-in 1.2s, slide-from-left 1.2s;
     -moz-animation: fade-in 1.2s, slide-from-left 1.2s;
     -ms-animation: fade-in 1.2s, slide-from-left 1.2s;
@@ -691,12 +710,12 @@ textarea {
         font-size: 3.5rem; } }
     @media only screen and (max-width: 768px) {
       .intro h3 {
-        font-size: 3.2rem;
-        margin: 17% 0 24%; } }
+        font-size: 3.2rem; } }
     @media only screen and (max-width: 600px) {
       .intro h3 {
-        font-size: 2.2rem;
-        margin: 23% 0 21%; } }
+        font-size: 2.4rem; } }
+  .intro hr {
+    margin: 25px 0 0 0 !important; }
 
 .filtering.col {
   width: 20%; }
@@ -779,6 +798,9 @@ a.load-more, a.load-more:visited {
 
 .widgets-footer {
   margin: 50px 0 300px; }
+  @media only screen and (max-width: 768px) {
+    .widgets-footer {
+      margin-bottom: auto; } }
   .widgets-footer hr.divider {
     margin: 60px 0; }
   @media only screen and (max-width: 768px) {
@@ -803,7 +825,8 @@ footer {
   footer .col {
     margin: 0; }
     footer .col.right {
-      float: right; }
+      float: right;
+      margin-top: 17px; }
     footer .col .email a, footer .col .email a:visited {
       color: #737d8d; }
       footer .col .email a:hover, footer .col .email a:active, footer .col .email a:visited:hover, footer .col .email a:visited:active {
@@ -819,26 +842,26 @@ footer {
       footer .copy, footer .email {
         display: block; }
       footer .copy {
-        margin-bottom: 5px; }
+        margin-bottom: 7px; }
       footer .col.contact {
         float: none; }
       footer .divider {
         display: none; } }
 
+.more a, .more a:visited {
+  color: inherit; }
 .more i {
   color: inherit;
-  font-size: 1.5rem;
   border: none;
   display: inline-block;
-  margin-left: 4px;
-  color: #fff;
-  background: #0278b5;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
+  margin-left: 2px;
+  color: inherit;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   text-align: center; }
   .more i:hover, .more i:active {
-    background: #0293dd; }
+    background-color: #F1F2F6; }
 
 .pagetitle {
   margin: 8% 0 1%; }
@@ -850,7 +873,8 @@ footer {
     color: #737d8d;
     font-size: 1.45rem; }
   .pagetitle h2 {
-    font-size: 5.6rem; }
+    font-size: 6.2rem;
+    font-weight: 100; }
     @media only screen and (max-width: 768px) {
       .pagetitle h2 {
         font-size: 2.8rem;
@@ -865,9 +889,11 @@ footer {
 .single .page-banner hr {
   margin-top: 20px; }
 .single .pagetitle {
+  margin-top: 16%;
   text-align: center; }
   .single .pagetitle h2 {
-    font-size: 4rem;
+    font-size: 4.75rem;
+    font-weight: 100;
     margin: 0 0 8px 0; }
     @media only screen and (max-width: 768px) {
       .single .pagetitle h2 {
@@ -983,7 +1009,13 @@ article p img {
   .post-wrap .excerpt .read-more {
     font-size: 1.45rem;
     font-weight: 900;
-    margin-top: -10px; }
+    margin-top: -10px;
+    background: #43444b;
+    color: #F1F2F6;
+    padding: 6px 12px;
+    display: inline-block; }
+    .post-wrap .excerpt .read-more:hover {
+      background: #111; }
   .post-wrap .excerpt a, .post-wrap .excerpt a:visited {
     display: block;
     color: inherit; }
@@ -1035,11 +1067,16 @@ a.post, a.post:visited {
       white-space: normal; } }
 
 .page-banner {
-  margin-top: 35px;
+  margin-top: 22px;
   position: relative;
   overflow: hidden;
   background-color: #1a1b1d;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  -webkit-animation: fade-in 1.2s;
+  -moz-animation: fade-in 1.2s;
+  -ms-animation: fade-in 1.2s;
+  -o-animation: fade-in 1.2s;
+  animation: fade-in 1.2s; }
   .page-banner .img-blog {
     background: url(../img/img-blog.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -1068,7 +1105,7 @@ a.post, a.post:visited {
       fill: #fff; } }
 
 .search-form {
-  width: 350px;
+  width: 320px;
   overflow: hidden; }
   .search-form button {
     float: right;
@@ -1086,14 +1123,6 @@ a.post, a.post:visited {
 
 .screen-reader-text {
   display: none; }
-
-.alignright {
-  float: right;
-  margin-right: -20%;
-  margin-left: 3.2rem; }
-  @media only screen and (max-width: 1000px) {
-    .alignright {
-      margin-right: 0; } }
 
 .related article {
   margin: 0; }
@@ -1115,14 +1144,13 @@ a.post, a.post:visited {
 
 .alignleft {
   float: left;
-  margin-right: 3.2rem;
-  margin-left: -20%; }
+  margin-right: 3.2rem; }
   @media only screen and (max-width: 1000px) {
     .alignleft {
       margin-left: 0; } }
 
 .alignright, .alignleft {
-  max-width: 60%;
+  max-width: 48%;
   margin-top: 1rem;
   margin-bottom: 1.5rem; }
   @media only screen and (max-width: 768px) {
@@ -1141,6 +1169,13 @@ a.post, a.post:visited {
   width: 100%;
   margin: 40px auto; }
 
+.alignright {
+  float: right;
+  margin-left: 3.2rem; }
+  @media only screen and (max-width: 1000px) {
+    .alignright {
+      margin-right: 0; } }
+
 .wp-caption {
   text-align: center; }
   .wp-caption img {
@@ -1149,5 +1184,20 @@ a.post, a.post:visited {
   .wp-caption .wp-caption-text {
     font-size: 1.45rem;
     color: #737d8d; }
+
+.attach-wrap {
+  margin-top: 5%;
+  margin-bottom: 10%; }
+
+.attachment .sidebar .desc {
+  font-size: 1.45rem; }
+.attachment .sidebar .meta {
+  margin-bottom: 32px; }
+.attachment .sidebar nav {
+  font-size: 1.45rem; }
+  .attachment .sidebar nav a, .attachment .sidebar nav a:visited {
+    color: inherit; }
+.attachment .sidebar h2 {
+  margin-bottom: 5px; }
 
 /*# sourceMappingURL=style.css.map */
